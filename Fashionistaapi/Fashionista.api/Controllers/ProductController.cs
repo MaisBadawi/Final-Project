@@ -47,7 +47,7 @@ namespace Fashionista.api.Controllers
         { return productService.GetProduct_ID(id); }
 
         [HttpPost]
-        [Route("AllProductByCtegory")]
+        [Route("AllProductForCust")]
         public List<GetProductByInfo> GetProduct_Category([FromBody] PersonInfoDto product)
         { return productService.GetProduct_Category(product); }
 

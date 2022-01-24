@@ -13,9 +13,10 @@ namespace Fashionista.core.Data
         }
 
         public decimal Id { get; set; }
-        public decimal DeliveryId { get; set; }
+        public decimal Delivery_Id { get; set; }
         public string Xlit { get; set; }
         public string Ylit { get; set; }
+        public decimal Status { get; set; }
 
         public virtual User DeliveryNavigation { get; set; }
         public virtual ICollection<Order> Orders { get; set; }

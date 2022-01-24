@@ -1166,11 +1166,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj",
+      "projectUniqueName": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj",
       "projectName": "Fashionista.api",
-      "projectPath": "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj",
+      "projectPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj",
       "packagesPath": "C:\\Users\\iMSI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.api\\obj\\",
+      "outputPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\iMSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1187,11 +1187,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
-              "projectPath": "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj"
+            "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
+              "projectPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj"
             },
-            "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj": {
-              "projectPath": "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj"
+            "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj": {
+              "projectPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj"
             }
           }
         }

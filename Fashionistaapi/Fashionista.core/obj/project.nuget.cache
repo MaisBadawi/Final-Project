@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sz4dZCP17w4zEU4ytgCjqyleb0D6c+phqG3SNjMrm8WjbofXI5+tSB6m88QUSqLPvyiZuJmfy/+L/4RgGJ5/dg==",
+  "dgSpecHash": "Q+7ZYuk78nmGkAWplPA0x0oBfjo44bhSdkmGhz/ylXvsJSbB44t62aGEsBZjGRha5eZ9qp7cXOLIz2MDKvr1VQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
+  "projectFilePath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iMSI\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\microsoft.netcore.platforms.5.0.4.nupkg.sha512",
     "C:\\Users\\iMSI\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",

@@ -1,4 +1,5 @@
 
+using Fashionista.core;
 using Fashionista.core.Common;
 using Fashionista.core.Repository;
 using Fashionista.core.Service;
@@ -35,14 +36,26 @@ namespace Fashionista.api
             services.AddScoped<IdbContext, dbContext>();
 
 
-            services.AddScoped<IProductRepository, ProductRepository>();//pro
+            services.AddScoped<IProductRepository, ProductRepository>();//1.pro
             services.AddScoped<IProductService, ProductService>();
 
-            services.AddScoped<IPropertyRepository, PropertyRepository>();//prop
+            services.AddScoped<IPropertyRepository, PropertyRepository>();//2.prop
             services.AddScoped<IPropertyService, PropertyService>();
 
-            services.AddScoped<IPaymentRepository, PaymentRepository>();//pay
+            services.AddScoped<IPaymentRepository, PaymentRepository>();//3.pay
             services.AddScoped<IPaymentService, PaymentService>();
+            
+            services.AddScoped<IAgeRepository, AgeRepository>();//4.age
+            services.AddScoped<IAgeServices, AgeServices>();
+
+            services.AddScoped<IDeliveryRepository, DeliveryRepository>();//5.deliv
+            services.AddScoped<IDeliveryServices, DeliveryServices>();
+
+            services.AddScoped<IFroleRepository, FroleRepository>();//6.frolr
+            services.AddScoped<IFroleServices, FroleServices>();
+
+            services.AddScoped<ISkinRepository, SkinRepository>(); //7.skin
+            services.AddScoped<ISkinServices, SkinServices>();
 
             services.AddControllers();
             

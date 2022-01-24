@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S8lfuii/jaYkoOnfVzyT2uTsmBLv7n/DXUEnbfmUCiQ0mYjlzgBJiqpa0jpx9jeAL1emzT+79q47zpfyvM7SSw==",
+  "dgSpecHash": "RTEHBKHMASjDRPZzZfG3jO2uV+cVBtIcbsh31xA98i6ju/pkxkUJABYJZSvwjzzUmBKMwRzaO1uFbyh7jv3QMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj",
+  "projectFilePath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iMSI\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\iMSI\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

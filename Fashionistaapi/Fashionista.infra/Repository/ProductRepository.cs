@@ -62,7 +62,7 @@ namespace Fashionista.infra.Repository
             p.Add("P_CategoryId", product.CategoryId, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_DateOfAdd", product.Dateofadd, dbType: DbType.Date, direction: ParameterDirection.Input);
 
-            var result = context.connection.ExecuteAsync("Product_Package.Insert_Product", p, commandType: CommandType.StoredProcedure);
+            var result = context.connection.ExecuteAsync("Product_Package.Update_Product", p, commandType: CommandType.StoredProcedure);
             return true;
         }
 

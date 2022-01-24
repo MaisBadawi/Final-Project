@@ -56,8 +56,8 @@ namespace Fashionista.infra.Repository
             var p = new DynamicParameters();
             p.Add("UserId", userId, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
-            var result = context.connection.Query<Payment>("Payment_Pakage.Get_Balance", p, commandType: CommandType.StoredProcedure);
-            return result.FirstOrDefault().Balanc;
+            Payment result = context.connection.Query<Payment>("Payment_Pakage.Get_Balance", p, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            return result.Balanc;
         }
 
         public Payment Get_Visa_By_Id(int id)
@@ -73,11 +73,11 @@ namespace Fashionista.infra.Repository
         {
             var p = new DynamicParameters();
 
-            p.Add("@Visa_Number", payment.Visa_Number, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("VisaNumber", payment.Visa_Number, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("Pass", payment.Cvv, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("Visa_Balance", payment.Balanc, dbType: DbType.Decimal, direction: ParameterDirection.Input);
-            p.Add("@UserId", payment.User_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("Exp_Date", payment.Experd_Date, dbType: DbType.Date, direction: ParameterDirection.Input);
+            p.Add("UserId", payment.User_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("ExpDate", payment.Experd_Date, dbType: DbType.Date, direction: ParameterDirection.Input);
            
 
             var result = context.connection.ExecuteAsync("Payment_Pakage.Insert_Visa", p, commandType: CommandType.StoredProcedure);
@@ -111,11 +111,11 @@ namespace Fashionista.infra.Repository
             var p = new DynamicParameters();
             p.Add("Id_Of_Visa", payment.Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
-            p.Add("Visa_Number", payment.Visa_Number, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("VisaNumber", payment.Visa_Number, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("Pass", payment.Cvv, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("Visa_Balance", payment.Balanc, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             p.Add("UserId", payment.User_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("Exp_Date", payment.Experd_Date, dbType: DbType.Date, direction: ParameterDirection.Input);
+            p.Add("ExpDate", payment.Experd_Date, dbType: DbType.Date, direction: ParameterDirection.Input);
 
 
             var result = context.connection.ExecuteAsync("Payment_Pakage.Update_Visa_By_Id", p, commandType: CommandType.StoredProcedure);

@@ -10,3 +10,15 @@ C:\Users\iMSI\Desktop\Final  Project\Mais\Fashionistaapi\Fashionista.infra\obj\D
 C:\Users\iMSI\Desktop\Final  Project\Mais\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.pdb
 C:\Users\iMSI\Desktop\Final  Project\Mais\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.core.dll
 C:\Users\iMSI\Desktop\Final  Project\Mais\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.core.pdb
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.infra.deps.json
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.infra.dll
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.infra.pdb
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.core.dll
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.core.pdb
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.csproj.AssemblyReference.cache
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.AssemblyInfoInputs.cache
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.AssemblyInfo.cs
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.csproj.CoreCompileInputs.cache
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.dll
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.pdb

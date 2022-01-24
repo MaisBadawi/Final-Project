@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {}
+    "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
+    "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
+        "projectUniqueName": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
         "projectName": "Fashionista.core",
-        "projectPath": "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
+        "projectPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
         "packagesPath": "C:\\Users\\iMSI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iMSI\\Desktop\\Final  Project\\Mais\\Fashionistaapi\\Fashionista.core\\obj\\",
+        "outputPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\iMSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
