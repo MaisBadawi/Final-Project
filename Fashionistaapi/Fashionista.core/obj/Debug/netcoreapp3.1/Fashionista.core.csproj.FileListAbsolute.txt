@@ -17,4 +17,3 @@ C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.core\obj\Debug\net
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.csproj.CoreCompileInputs.cache
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.dll
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.pdb
-C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.csproj.AssemblyReference.cache

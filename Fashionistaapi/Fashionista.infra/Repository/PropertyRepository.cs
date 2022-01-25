@@ -49,10 +49,10 @@ namespace Fashionista.infra.Repository
         public List<GetPropertyDto> GetProperty_IDProduct(Property proparty)
         {
             var p = new DynamicParameters();
-            p.Add("@P_PrpductId", proparty.Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("@Skin_Color", proparty.SkinId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("@P_SizeGeneral", proparty.SizeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("@P_AgePeriod", proparty.AgeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("@P_PrpductId", proparty.ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("@Skin_Color", proparty.SKIN_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("@P_SizeGeneral", proparty.SIZE_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("@P_AgePeriod", proparty.AGE_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
             var result = context.connection.Query<GetPropertyDto>("Proparety_Package.GetProperty_IDProduct", p, commandType: CommandType.StoredProcedure);
             return result.ToList();
@@ -62,12 +62,12 @@ namespace Fashionista.infra.Repository
         {
             var p = new DynamicParameters();
 
-            p.Add("@P_Quantity", proparty.Quantite, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("@P_Color_Id", proparty.ColorId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("@P_Size_Id ", proparty.SizeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("@P_PrpductId", proparty.ProductId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("@P_SkinId", proparty.SkinId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_AgeId", proparty.AgeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_Quantity", proparty.QUANTITE, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_Color_Id", proparty.COLOR_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_Size_Id ", proparty.SIZE_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_PrpductId", proparty.PRODUCT_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_SkinId", proparty.SIZE_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_AgeId", proparty.AGE_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
            
             var result = context.connection.ExecuteAsync("Proparety_Package.Insert_Property", p, commandType: CommandType.StoredProcedure);
 
@@ -79,13 +79,13 @@ namespace Fashionista.infra.Repository
         {
             var p = new DynamicParameters();
 
-            p.Add("P_ID", proparty.Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_Quantity", proparty.Quantite, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_Color_Id", proparty.ColorId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_Size_Id ", proparty.SizeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_PrpductId", proparty.ProductId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_SkinId", proparty.SkinId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_AgeId", proparty.AgeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_ID", proparty.ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_Quantity", proparty.QUANTITE, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_Color_Id", proparty.COLOR_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_Size_Id ", proparty.SIZE_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_PrpductId", proparty.PRODUCT_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_SkinId", proparty.SIZE_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_AgeId", proparty.AGE_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
             var result = context.connection.ExecuteAsync("Proparety_Package.Update_Property", p, commandType: CommandType.StoredProcedure);
 

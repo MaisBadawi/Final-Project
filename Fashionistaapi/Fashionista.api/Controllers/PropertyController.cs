@@ -1,6 +1,7 @@
 ﻿using Fashionista.core.Data;
 using Fashionista.core.DTO;
 using Fashionista.core.Repository;
+using Fashionista.core.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,9 +15,9 @@ namespace Fashionista.api.Controllers
     [ApiController]
     public class PropertyController : ControllerBase
     {
-        private readonly IPropertyRepository productService;
+        private readonly IPropertyService productService;
 
-        public PropertyController(IPropertyRepository productService)
+        public PropertyController(IPropertyService productService)
         {
             this.productService = productService;
         }

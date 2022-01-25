@@ -54,7 +54,7 @@ namespace Fashionista.infra.Repository
             p.Add("T_STATUS", testamonial.Status, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("T_CUSTOMER_ID", testamonial.CustomerId, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
-            var result = context.connection.ExecuteAsync("TESTIMONIALS_PACKAGE.INSERTTESTIMONIALS", p, commandType: CommandType.StoredProcedure);
+            var result = context.connection.Execute("TESTIMONIALS_PACKAGE.INSERTTESTIMONIALS", p, commandType: CommandType.StoredProcedure);
             return "valid";
         }
 

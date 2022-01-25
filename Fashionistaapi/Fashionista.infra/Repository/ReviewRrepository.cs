@@ -58,6 +58,9 @@ namespace Fashionista.infra.Repository
             p.Add("R_Cust_Id", review.CUSTOMER_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("R_Product_Id", review.PRODUCT_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("R_Status", review.STATUS, dbType: DbType.Int32, direction: ParameterDirection.Input);
+           
+            p.Add("R_Rating", review.RATING, dbType: DbType.Int32, direction: ParameterDirection.Input);
+
             var result = context.connection.ExecuteAsync("Reviews_Package.Insert_Review", p, commandType: CommandType.StoredProcedure);
             return "true";
         }
@@ -77,6 +80,8 @@ namespace Fashionista.infra.Repository
             p.Add("R_Cust_Id", review.CUSTOMER_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("R_Product_Id", review.PRODUCT_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("R_Status", review.STATUS, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("R_Rating", review.RATING, dbType: DbType.Int32, direction: ParameterDirection.Input);
+
             var result = context.connection.ExecuteAsync("Reviews_Package.Update_Review", p, commandType: CommandType.StoredProcedure);
             return true;
         }

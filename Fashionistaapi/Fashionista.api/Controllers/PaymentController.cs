@@ -61,14 +61,7 @@ namespace Fashionista.api.Controllers
         public Payment Get_Visa_By_Id(int id)
         { return paymentService.Get_Visa_By_Id(id); }
 
-
-        [HttpPut]
-        [Route("UpdateBalance/{visaId}/{visaBalance}")]
-        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public bool Update_Balance(int visaId, float visaBalance)
-        { return paymentService.Update_Balance(visaId, visaBalance); }
-
+      
 
         [HttpPut]
         [Route("DiscountOrder/{userId}/{orderPrice}")]

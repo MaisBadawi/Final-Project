@@ -49,10 +49,7 @@ namespace Fashionista.infra.Service
         {
             return paymentService.SUM_Max_Balance();        }
 
-        public bool Update_Balance(int visaId, float visaBalance)
-        {
-            return paymentService.Update_Balance(visaId,visaBalance);
-        }
+        
 
         public bool Update_Visa_By_Id(Payment payment)
         {
