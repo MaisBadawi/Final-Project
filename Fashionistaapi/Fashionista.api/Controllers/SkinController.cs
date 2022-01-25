@@ -20,17 +20,23 @@ namespace Fashionista.api.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public string insert_Skin([FromBody] Skin skin)
         {
             return service.insert_Skin(skin);
         }
         [HttpPut]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool update_Skin([FromBody] Skin skin)
         {
             return service.update_Skin(skin);
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(List<Skin>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public List<Skin> getall_Skin()
         {
             return service.getall_Skin();
@@ -38,6 +44,8 @@ namespace Fashionista.api.Controllers
 
 
         [HttpGet("GetSkinById/{id}")]
+        [ProducesResponseType(typeof(Skin), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public Skin get_Skin_By_id(int id)
         {
             return service.get_Skin_By_id(id);
@@ -45,6 +53,8 @@ namespace Fashionista.api.Controllers
 
 
         [HttpDelete]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool delete_Skin(int id)
         {
             return service.delete_Skin(id);

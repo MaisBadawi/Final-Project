@@ -57,6 +57,27 @@ namespace Fashionista.api
             services.AddScoped<ISkinRepository, SkinRepository>(); //7.skin
             services.AddScoped<ISkinServices, SkinServices>();
 
+            services.AddScoped<ICategoryRepository, CategoryRepository>(); //8. cat
+            services.AddScoped<ICategoryService, CategoryService>();
+
+            services.AddScoped<IProductColorRepository, ProductColorRepository>(); //8. cat
+            services.AddScoped<IProductColorService, ProductColorService>();
+
+            services.AddScoped<IMessageRepository, MessageRepository>(); //9. msg
+            services.AddScoped<IMessageService, MessageService>();
+
+            services.AddScoped<IOfferRepository, OfferRepository>(); //10. offer
+            services.AddScoped<IOfferService, OfferService>();
+
+            services.AddScoped<IStandaredSizeService, StandaredSizeService>(); //11. size
+            services.AddScoped<IStandaredSizeRepository, StandaredSizeRepository>();
+
+            services.AddScoped<IReviewRrepository, ReviewRrepository>(); //12. Review
+            services.AddScoped<IReviewService, ReviewService>();
+
+            services.AddScoped<ITestimonialRepository, TestimonialRepository>(); //13. Test
+            services.AddScoped<ITestimonialService, TestimonialService>();
+
             services.AddControllers();
             
         }

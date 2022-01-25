@@ -21,7 +21,7 @@ namespace Fashionista.core.Data
         public decimal AgeId { get; set; }
 
         public virtual Age Age { get; set; }
-        public virtual Color Color { get; set; }
+        public virtual ProductColor Color { get; set; }
         public virtual Product Product { get; set; }
         public virtual StandaredSize Size { get; set; }
         public virtual Skin Skin { get; set; }

@@ -5,15 +5,15 @@ using System.Collections.Generic;
 
 namespace Fashionista.core.Data
 {
-    public partial class Color
+    public partial class ProductColor
     {
-        public Color()
+        public ProductColor()
         {
             Properties = new HashSet<Property>();
         }
 
         public decimal Id { get; set; }
-        public string ColorProduct { get; set; }
+        public string COLOR_PRODUCT { get; set; }
 
         public virtual ICollection<Property> Properties { get; set; }
     }

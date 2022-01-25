@@ -20,17 +20,25 @@ namespace Fashionista.api.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public string Insert_Delivary([FromBody] Delivery delivery)
         {
             return service.Insert_Delivary(delivery);
         }
+      
+        
         [HttpPut]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool Update_Delivary([FromBody] Delivery delivery)
         {
             return service.Update_Delivary(delivery);
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(List<Delivery>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public List<Delivery> Get_All_Delivary()
         {
             return service.Get_All_Delivary();
@@ -40,6 +48,8 @@ namespace Fashionista.api.Controllers
 
 
         [HttpGet("GetDeliveryById/{id}")]
+        [ProducesResponseType(typeof(Delivery), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public Delivery Get_Delivary_By_Id(int id)
         {
             return service.Get_Delivary_By_Id(id);
@@ -47,6 +57,8 @@ namespace Fashionista.api.Controllers
 
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool Delete_Delivary_By_Id(int id)
         {
             return service.Delete_Delivary_By_Id(id);

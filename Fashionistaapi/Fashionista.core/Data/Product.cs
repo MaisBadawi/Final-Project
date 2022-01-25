@@ -10,7 +10,7 @@ namespace Fashionista.core.Data
         public Product()
         {
             Properties = new HashSet<Property>();
-            Reviews = new HashSet<Review>();
+            Reviews = new HashSet<Reviews>();
         }
 
         public decimal Id { get; set; }
@@ -25,6 +25,6 @@ namespace Fashionista.core.Data
         public virtual Category Category { get; set; }
         public virtual Offer Offer { get; set; }
         public virtual ICollection<Property> Properties { get; set; }
-        public virtual ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Reviews> Reviews { get; set; }
     }
 }
