@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj": {}
+    "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj": {
+    "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj",
+        "projectUniqueName": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj",
         "projectName": "Fashionista.api",
-        "projectPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj",
-        "packagesPath": "C:\\Users\\iMSI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.api\\obj\\",
+        "projectPath": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.api\\Fashionista.api.csproj",
+        "packagesPath": "C:\\Users\\rama khazaaleh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\iMSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rama khazaaleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
-                "projectPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj"
+              "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
+                "projectPath": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj"
               },
-              "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj": {
-                "projectPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj"
+              "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj": {
+                "projectPath": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj"
               }
             }
           }
@@ -47,6 +47,22 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
             "Oracle.ManagedDataAccess.Core": {
               "target": "Package",
               "version": "[3.21.41, )"
@@ -70,21 +86,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
+    "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
+        "projectUniqueName": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
         "projectName": "Fashionista.core",
-        "projectPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
-        "packagesPath": "C:\\Users\\iMSI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\obj\\",
+        "projectPath": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
+        "packagesPath": "C:\\Users\\rama khazaaleh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\iMSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rama khazaaleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -110,6 +126,22 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
             "Oracle.ManagedDataAccess.Core": {
               "target": "Package",
               "version": "[3.21.41, )"
@@ -130,21 +162,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj": {
+    "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj",
+        "projectUniqueName": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj",
         "projectName": "Fashionista.infra",
-        "projectPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj",
-        "packagesPath": "C:\\Users\\iMSI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.infra\\obj\\",
+        "projectPath": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj",
+        "packagesPath": "C:\\Users\\rama khazaaleh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\iMSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rama khazaaleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,8 +190,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
-                "projectPath": "C:\\Users\\iMSI\\Desktop\\FinalProject\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj"
+              "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
+                "projectPath": "C:\\Users\\rama khazaaleh\\Desktop\\FinalProject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj"
               }
             }
           }
@@ -178,9 +210,21 @@
               "target": "Package",
               "version": "[2.0.123, )"
             },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.0.3, )"
             },
             "Oracle.ManagedDataAccess.Core": {
               "target": "Package",
@@ -202,7 +246,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

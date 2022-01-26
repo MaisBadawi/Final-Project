@@ -12,7 +12,7 @@ namespace Fashionista.core.Data
         public decimal CustId { get; set; }
         public decimal ProId { get; set; }
         public decimal Quantity { get; set; }
-        public decimal? Price { get; set; }
+        public decimal Price { get; set; }
 
         public virtual User Cust { get; set; }
         public virtual Order Order { get; set; }

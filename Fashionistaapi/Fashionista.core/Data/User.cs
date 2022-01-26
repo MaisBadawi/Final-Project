@@ -23,7 +23,7 @@ namespace Fashionista.core.Data
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
-        public string ImagePath { get; set; }
+        public string Image_Path { get; set; }
         public decimal? Salary { get; set; }
         public decimal? Height { get; set; }
         public string SkinColor { get; set; }
@@ -33,7 +33,7 @@ namespace Fashionista.core.Data
         public DateTime DateReg { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public decimal RolId { get; set; }
+        public decimal Rol_Id { get; set; }
         public string Lx { get; set; }
         public string Ly { get; set; }
 

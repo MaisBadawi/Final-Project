@@ -18,3 +18,13 @@ C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.core\obj\Debug\net
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.csproj.CoreCompileInputs.cache
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.dll
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.pdb
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.core\bin\Debug\netcoreapp3.1\Fashionista.core.deps.json
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.core\bin\Debug\netcoreapp3.1\Fashionista.core.dll
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.core\bin\Debug\netcoreapp3.1\Fashionista.core.pdb
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.csproj.AssemblyReference.cache
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.AssemblyInfoInputs.cache
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.AssemblyInfo.cs
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.csproj.CoreCompileInputs.cache
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.dll
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.pdb

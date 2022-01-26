@@ -22,3 +22,16 @@ C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\ne
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.csproj.CoreCompileInputs.cache
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.dll
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.pdb
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.infra.deps.json
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.infra.dll
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.infra.pdb
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.core.dll
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.core.pdb
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.csproj.AssemblyReference.cache
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.AssemblyInfoInputs.cache
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.AssemblyInfo.cs
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.csproj.CoreCompileInputs.cache
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.csproj.CopyComplete
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.dll
+C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.pdb
