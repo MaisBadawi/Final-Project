@@ -7,10 +7,10 @@ namespace Fashionista.core.Data
 {
     public partial class Message
     {
-        public decimal Id { get; set; }
-        public decimal CustomerId { get; set; }
-        public string Messg { get; set; }
-        public string Reciver { get; set; }
+        public decimal ID { get; set; }
+        public decimal CUSTOMER_ID { get; set; }
+        public string MESSG { get; set; }
+        public string RECIVER { get; set; }
 
         public virtual User Customer { get; set; }
     }

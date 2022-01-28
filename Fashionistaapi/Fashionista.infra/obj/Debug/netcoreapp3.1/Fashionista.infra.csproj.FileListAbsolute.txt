@@ -22,6 +22,7 @@ C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\ne
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.csproj.CoreCompileInputs.cache
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.dll
 C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.pdb
+<<<<<<< HEAD
 C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.infra.deps.json
 C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.infra.dll
 C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\bin\Debug\netcoreapp3.1\Fashionista.infra.pdb
@@ -35,3 +36,6 @@ C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashio
 C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.csproj.CopyComplete
 C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.dll
 C:\Users\rama khazaaleh\Desktop\FinalProject\Final-Project\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.pdb
+=======
+C:\Users\iMSI\Desktop\FinalProject\Fashionistaapi\Fashionista.infra\obj\Debug\netcoreapp3.1\Fashionista.infra.csproj.CopyComplete
+>>>>>>> e9ef1d1a9e79767bd809b69b94be857da6dff0d2

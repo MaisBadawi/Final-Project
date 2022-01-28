@@ -19,6 +19,15 @@ namespace Fashionista.infra.Repository
             this.context = context;
         }
 
+        public User Auth(User user)
+        {
+            var ob = new DynamicParameters();
+            ob.Add("PASS", user.Password, dbType: DbType.String, direction: ParameterDirection.Input);
+            ob.Add("U_USERNAME", user.Username, dbType: DbType.String, direction: ParameterDirection.Input);
+            IEnumerable<User> result = context.connection.Query<User>("USERS_PACKAGE.User_Login", ob, commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
         public User Changepass(Auth auth)
         {
             var ob1 = new DynamicParameters();
@@ -196,13 +205,7 @@ namespace Fashionista.infra.Repository
 
         }
 
-        //public User Auth(Auth auth)
-        //{
-        //    var ob = new DynamicParameters();
-        //    ob.Add("PASS", auth.PASS, dbType: DbType.String, direction: ParameterDirection.Input);
-        //    ob.Add("U_USERNAME", auth.U_USERNAME, dbType: DbType.String, direction: ParameterDirection.Input);
-        //    IEnumerable<User> result = context.connection.Query<User>("USERS_PACKAGE.User_Login", ob, commandType: CommandType.StoredProcedure);
-        //    return result.FirstOrDefault();
-        //}
+
+      
     }
 }

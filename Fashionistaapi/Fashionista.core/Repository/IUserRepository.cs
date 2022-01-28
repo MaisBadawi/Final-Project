@@ -20,7 +20,8 @@ namespace Fashionista.core.Repository
       
         public User Check_Username(Auth auth);
         public User Changepass(Auth auth);
+        public User Auth(User user);
 
-        
+
     }
 }

@@ -12,7 +12,7 @@ namespace Fashionista.core.Data
             Deliveries = new HashSet<Delivery>();
             Messages = new HashSet<Message>();
             Payments = new HashSet<Payment>();
-            Reviews = new HashSet<Review>();
+            Reviews = new HashSet<Reviews>();
             Testimonials = new HashSet<Testimonial>();
             UserOrders = new HashSet<UserOrder>();
         }
@@ -41,7 +41,7 @@ namespace Fashionista.core.Data
         public virtual ICollection<Delivery> Deliveries { get; set; }
         public virtual ICollection<Message> Messages { get; set; }
         public virtual ICollection<Payment> Payments { get; set; }
-        public virtual ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Reviews> Reviews { get; set; }
         public virtual ICollection<Testimonial> Testimonials { get; set; }
         public virtual ICollection<UserOrder> UserOrders { get; set; }
     }

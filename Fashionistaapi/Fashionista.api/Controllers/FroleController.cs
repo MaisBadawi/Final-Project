@@ -20,17 +20,25 @@ namespace Fashionista.api.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public string Insert_Role([FromBody] Frole role)
         {
             return service.Insert_Role(role);
         }
+       
+        
         [HttpPut]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool Update_Role([FromBody] Frole role)
         {
             return service.Update_Role(role);
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(List<Frole>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public List<Frole> Get_All_Rolle()
         {
             return service.Get_All_Rolle();
@@ -38,6 +46,8 @@ namespace Fashionista.api.Controllers
 
 
         [HttpGet("GetRoleById/{id}")]
+        [ProducesResponseType(typeof(Frole), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public Frole Get_Rolle_By_Id(int id)
         {
             return service.Get_Rolle_By_Id(id);
@@ -45,6 +55,8 @@ namespace Fashionista.api.Controllers
 
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool Delete_Role(int id)
         {
             return service.Delete_Role(id);

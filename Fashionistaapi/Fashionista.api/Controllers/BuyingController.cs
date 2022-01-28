@@ -24,6 +24,8 @@ namespace Fashionista.api.Controllers
 
         [HttpDelete]
         [Route("DeleteUserOrder/{Id}")]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool DeleteUO_ID(int Id)
         {
 
@@ -43,6 +45,8 @@ namespace Fashionista.api.Controllers
 
         [HttpPost]
         [Route("InsertItemToCart")]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool Insert_UserOrder([FromBody] UserOrder userOrder)
         {
             return buyingServices.Insert_UserOrder(userOrder);
@@ -52,7 +56,8 @@ namespace Fashionista.api.Controllers
 
         [HttpPut]
         [Route("EditeItemInCart")]
-
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool UpdateQuant_ID([FromBody] UserOrder userOrder)
         {
             return buyingServices.UpdateQuant_ID(userOrder);
@@ -62,6 +67,8 @@ namespace Fashionista.api.Controllers
 
         [HttpPut]
         [Route("ConfirmationOrder")]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool Update_OrderID([FromBody]UserOrder userOrder)
         {
             return buyingServices.Update_OrderID(userOrder);
@@ -69,7 +76,8 @@ namespace Fashionista.api.Controllers
 
         [HttpGet]
         [Route("DiscountQuant/{Id_Of_Cust}")]
-
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public bool Discount_QuantityProp(int Id_Of_Cust)
         {
             return buyingServices.Discount_QuantityProp(Id_Of_Cust);

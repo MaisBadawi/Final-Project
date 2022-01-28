@@ -94,17 +94,6 @@ namespace Fashionista.infra.Repository
             return result.FirstOrDefault();
         }
 
-        public bool Update_Balance(int visaId, float visaBalance)
-        {
-            var p = new DynamicParameters();
-            p.Add("Id_Of_Visa", visaId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("Visa_Balance", visaBalance, dbType: DbType.Decimal, direction: ParameterDirection.Input);
-            var result = context.connection.ExecuteAsync("Payment_Pakage.Update_Balance", p, commandType: CommandType.StoredProcedure);
-
-
-            return true;
-
-        }
 
         public bool Update_Visa_By_Id(Payment payment)
         {

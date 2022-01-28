@@ -17,7 +17,7 @@ namespace Fashionista.core.Service
 
         public List<Employee> SearchEmployeeBYName(string EmpName);
         public List<Customer> SearchCustomerByName(string CustName);
-        //public string Auth(Auth auth);
+        public string Auth(User user);
         public bool Check_Username(Auth auth);
         public bool Changepass(Auth auth);
     }

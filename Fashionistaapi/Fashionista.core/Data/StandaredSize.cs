@@ -12,14 +12,14 @@ namespace Fashionista.core.Data
             Properties = new HashSet<Property>();
         }
 
-        public decimal Id { get; set; }
-        public decimal SizeUk { get; set; }
-        public decimal SizeEur { get; set; }
-        public string SizeGeneral { get; set; }
-        public decimal MaxWieght { get; set; }
-        public decimal MinWieght { get; set; }
-        public decimal MaxHighe { get; set; }
-        public decimal MinHighe { get; set; }
+        public decimal ID { get; set; }
+        public decimal SIZE_UK { get; set; }
+        public decimal SIZE_EUR { get; set; }
+        public string SIZE_GENERAL { get; set; }
+        public decimal MAX_WIEGHT { get; set; }
+        public decimal MIN_WIEGHT { get; set; }
+        public decimal MAX_HIGHE { get; set; }
+        public decimal MIN_HIGHE { get; set; }
 
         public virtual ICollection<Property> Properties { get; set; }
     }

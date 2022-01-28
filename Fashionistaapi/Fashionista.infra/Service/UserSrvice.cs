@@ -104,28 +104,28 @@ namespace Fashionista.infra.Service
             return userRepository.UPDATEUSER(user);
         }
 
-        //public string Auth(Auth auth)
-        //{
-        //    var result = userRepository.Auth(auth);
-        //    if (result == null)
-        //    {
-        //        return null;
-        //    }
-        //    else
+        public string Auth(User user)
+        {
+            var result = userRepository.Auth(user);
+            if (result == null)
+            {
+                return null;
+            }
+            else
 
-        //    {
-        //        var tokenHandler = new JwtSecurityTokenHandler();
-        //        var tokenKey = Encoding.ASCII.GetBytes("[SECRET USED TO SIGN AND VERIFY JWT TOKENS, IT CAN BE ANY STRING]");
-        //        var tokenDescriptor = new SecurityTokenDescriptor
-        //        {
-        //            Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, result.Username), new Claim(ClaimTypes.Name,result.RolId) }),
-        //            Expires = DateTime.UtcNow.AddHours(1),
-        //            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
-        //        };
+            {
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var tokenKey = Encoding.ASCII.GetBytes("[SECRET USED TO SIGN AND VERIFY JWT TOKENS, IT CAN BE ANY STRING]");
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name,Convert.ToString(result.Username) ), new Claim(ClaimTypes.Role, Convert.ToString(result.Rol_Id))}),
+                    Expires = DateTime.UtcNow.AddHours(1),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
+                };
 
-        //        var token = tokenHandler.CreateToken(tokenDescriptor);
-        //        return tokenHandler.WriteToken(token);
-        //    }
-        //}
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                return tokenHandler.WriteToken(token);
+            }
+        }
     }
 }

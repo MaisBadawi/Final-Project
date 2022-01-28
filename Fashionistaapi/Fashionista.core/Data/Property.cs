@@ -12,16 +12,15 @@ namespace Fashionista.core.Data
             UserOrders = new HashSet<UserOrder>();
         }
 
-        public decimal Id { get; set; }
-        public decimal Quantite { get; set; }
-        public decimal ColorId { get; set; }
-        public decimal SizeId { get; set; }
-        public decimal ProductId { get; set; }
-        public decimal SkinId { get; set; }
-        public decimal AgeId { get; set; }
-
+        public decimal ID { get; set; }
+        public decimal QUANTITE { get; set; }
+        public decimal COLOR_ID { get; set; }
+        public decimal SIZE_ID { get; set; }
+        public decimal PRODUCT_ID { get; set; }
+        public decimal SKIN_ID { get; set; }
+        public decimal AGE_ID { get; set; }
         public virtual Age Age { get; set; }
-        public virtual Color Color { get; set; }
+        public virtual ProductColor Color { get; set; }
         public virtual Product Product { get; set; }
         public virtual StandaredSize Size { get; set; }
         public virtual Skin Skin { get; set; }

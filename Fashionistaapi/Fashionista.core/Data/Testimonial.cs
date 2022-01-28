@@ -9,7 +9,7 @@ namespace Fashionista.core.Data
     {
         public decimal Id { get; set; }
         public string Texet { get; set; }
-        public decimal CustomerId { get; set; }
+        public decimal Customer_Id { get; set; }
         public decimal Status { get; set; }
 
         public virtual User Customer { get; set; }

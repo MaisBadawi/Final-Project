@@ -28,8 +28,8 @@ namespace Fashionista.infra.Repository
             p.Add("P_Description", product.Description, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("P_Price", product.Price, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             p.Add("P_Image", product.IMAGE_PATH, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("P_OfferId", product.OFFER_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_CategoryId", product.CategoryId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_OfferId", product.OFFER_ID, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+            p.Add("P_CategoryId", product.Category_Id, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             p.Add("P_DateOfAdd", product.Dateofadd, dbType: DbType.Date, direction: ParameterDirection.Input);
 
             var result = context.connection.ExecuteAsync("Product_Package.Insert_Product", p, commandType: CommandType.StoredProcedure);
@@ -58,8 +58,8 @@ namespace Fashionista.infra.Repository
             p.Add("P_Description", product.Description, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("P_Price", product.Price, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             p.Add("P_Image", product.IMAGE_PATH, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("P_OfferId", product.OFFER_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_CategoryId", product.CategoryId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("P_OfferId", product.OFFER_ID, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+            p.Add("P_CategoryId", product.Category_Id, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             p.Add("P_DateOfAdd", product.Dateofadd, dbType: DbType.Date, direction: ParameterDirection.Input);
 
             var result = context.connection.ExecuteAsync("Product_Package.Update_Product", p, commandType: CommandType.StoredProcedure);

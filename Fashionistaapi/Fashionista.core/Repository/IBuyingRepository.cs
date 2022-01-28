@@ -18,5 +18,6 @@ namespace Fashionista.core.Repository
         public bool Update_OrderID(UserOrder userOrder);//// store details of order (prop ,qunt,price) in order table after dicount from visa and get orderID 
 
         public bool Discount_QuantityProp(int Id_Of_Cust );
+
     }
 }
