@@ -124,7 +124,7 @@ namespace Fashionista.infra.Repository
             ob.Add("U_Password", user.Password, dbType: DbType.String, direction: ParameterDirection.Input);
             ob.Add("U_username", user.Username, dbType: DbType.String, direction: ParameterDirection.Input);
 
-            if(user.Id==6)
+            if(user.Rol_Id==6)
             {
                 ob.Add("UAge", user.Age, dbType: DbType.Decimal, direction: ParameterDirection.Input);
                 ob.Add("COLOROFUSER", user.SkinColor, dbType: DbType.String, direction: ParameterDirection.Input);

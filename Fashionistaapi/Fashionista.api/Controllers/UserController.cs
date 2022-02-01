@@ -126,6 +126,8 @@ namespace Fashionista.api.Controllers
 
         }
 
+
+
         [HttpPost]
         [Route("Auth")]
      
