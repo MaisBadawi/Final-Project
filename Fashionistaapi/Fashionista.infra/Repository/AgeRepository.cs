@@ -2,6 +2,7 @@
 using Fashionista.core;
 using Fashionista.core.Common;
 using Fashionista.core.Data;
+using Fashionista.core.Repository;
 using System;
 using System.Collections.Generic;
 using System.Data;

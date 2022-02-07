@@ -1,4 +1,4 @@
-﻿using Fashionista.core.Data;
+using Fashionista.core.Data;
 using Fashionista.core.DTO;
 using System;
 using System.Collections.Generic;
@@ -8,13 +8,15 @@ namespace Fashionista.core.Service
 {
     public interface IAggregationService
     {
-        public int NumOfOrder(User IDOFUSER);
-        public int SumOrders(User IDOFUSER);
-        public int NumEmp();
-        public int NumUser();
-        public float SumSalary();
-        public float SumSales();
-        public int NumOrderDev(Order Id_dev);
-        public int NumOrderDevDaily(OrderDev orderDev);
+    public Aggregetion NumOfOrder(User IDOFUSER);
+    public Aggregetion SumOrders(User IDOFUSER);
+    public Aggregetion NumEmp();
+        public Aggregetion NumUser();
+    public Aggregetion SumSalary();
+    public Aggregetion SumSales();
+    public Aggregetion NumOrderDev(Order Id_dev);
+    public Aggregetion SumSalesDaily(Aggregetion aggregetion);
+
+    public Aggregetion NumOrderDevDaily(OrderDev orderDev);
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,7 +12,7 @@ namespace Fashionista.core.DTO
         public string address { get; set; }
         public float TotalPrice { get; set; }
         public DateTime Date { get; set; }
-        public int DeliveryName { get; set; }
+        public string DeliveryName { get; set; }
         
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
@@ -16,8 +16,11 @@ namespace Fashionista.core.Data
         public DateTime Dateoforder { get; set; }
         public decimal? Status { get; set; }
         public decimal? DeliveryId { get; set; }
+        public string LX { get; set; }
 
-        public virtual Delivery Delivery { get; set; }
+        public string LY { get; set; }
+
+    public virtual Delivery Delivery { get; set; }
         public virtual ICollection<UserOrder> UserOrders { get; set; }
     }
 }

@@ -1,10 +1,11 @@
-﻿using Fashionista.core.Data;
+using Fashionista.core.Data;
 using Fashionista.core.DTO;
 using Fashionista.core.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -97,5 +98,47 @@ namespace Fashionista.api.Controllers
         public List<GetProductByInfo> GetLatest_Product([FromBody] PersonInfoDto product)
         { return productService.GetLatest_Product(product); }
 
-    }
+
+
+
+    //[Route("uploadimage")]
+    //[HttpPost]
+    //public Product uploadimage()
+    //{
+    //  try
+    //  {
+    //    var file = Request.Form.Files[0];
+        
+    //    byte[] fileimagecontent;
+    //    using (var memory = new MemoryStream())
+    //    {
+    //      file.CopyTo(memory);
+    //      fileimagecontent = memory.ToArray();//[0,0,0,0,1,1,24,56,46,4,7,89,78,97,87,987,98,7,9,] IN MEMORY
+    //    };
+    //    var filename = Path.GetFileNameWithoutExtension(file.FileName);//c:users/user/user/monther.jpg
+    //    string imagefilename = $"{filename}.{Path.GetExtension(file.FileName).Replace(".", "")}";
+
+
+    //    string path = Path.Combine("C:\\Users\\rama khazaaleh\\Desktop\\Fashionista\\Fashionista\\src\\assets\\image", imagefilename);
+
+    //    using (var filest = new FileStream(path, FileMode.Create))
+    //    {
+    //      file.CopyTo(filest);
+    //    }
+
+
+    //    Product pro = new Product();
+    //    pro.IMAGE_PATH= imagefilename;
+    //    return pro;
+    //  }
+    //  catch (FileLoadException e)
+    //  {
+
+    //    return null;
+    //  }
+
+    //}
+
+
+  }
 }

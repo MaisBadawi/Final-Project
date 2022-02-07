@@ -23,6 +23,7 @@ namespace Fashionista.api
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -32,7 +33,18 @@ namespace Fashionista.api
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
+
         {
+            services.AddCors(options =>
+            options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
+
+
             services.AddScoped<IdbContext, dbContext>();
 
 
@@ -45,7 +57,7 @@ namespace Fashionista.api
             services.AddScoped<IPaymentRepository, PaymentRepository>();//3.pay
             services.AddScoped<IPaymentService, PaymentService>();
             
-            services.AddScoped<IAgeRepository, AgeRepository>();//4.age
+           services.AddScoped<IAgeRepository, AgeRepository>();//4.age
             services.AddScoped<IAgeServices, AgeServices>();
 
             services.AddScoped<IDeliveryRepository, DeliveryRepository>();//5.deliv
@@ -87,7 +99,8 @@ namespace Fashionista.api
             services.AddScoped<ITestimonialRepository, TestimonialRepository>(); //14. Test
             services.AddScoped<ITestimonialService, TestimonialService>();
 
-
+            services.AddScoped<IAggregationRepository, AggregationRepository>(); //15. Aggregation
+            services.AddScoped<IAggregationService, AggregationService> ();//
             services.AddControllers();
             
         }
@@ -95,7 +108,12 @@ namespace Fashionista.api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors(options => options.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
+
+            
+
+
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -112,6 +130,8 @@ namespace Fashionista.api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {

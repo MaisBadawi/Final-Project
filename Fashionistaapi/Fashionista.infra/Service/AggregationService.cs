@@ -1,4 +1,4 @@
-﻿using Fashionista.core.Data;
+using Fashionista.core.Data;
 using Fashionista.core.DTO;
 using Fashionista.core.Repository;
 using Fashionista.core.Service;
@@ -17,44 +17,49 @@ namespace Fashionista.infra.Service
             this.aggregationRepository = aggregationRepository;
         }
 
-        public int NumEmp()
+    public Aggregetion NumEmp()
         {
             return aggregationRepository.NumEmp();
         }
 
-        public int NumOfOrder(User IDOFUSER)
+    public Aggregetion NumOfOrder(User IDOFUSER)
         {
             return aggregationRepository.NumOfOrder(IDOFUSER);
         }
 
-        public int NumOrderDev(Order Id_dev)
+    public Aggregetion NumOrderDev(Order Id_dev)
         {
             return aggregationRepository.NumOrderDev(Id_dev);
         }
 
-        public int NumOrderDevDaily(OrderDev orderDev)
+    public Aggregetion NumOrderDevDaily(OrderDev orderDev)
         {
             return aggregationRepository.NumOrderDevDaily(orderDev);
         }
 
-        public int NumUser()
+    public Aggregetion NumUser()
         {
             return aggregationRepository.NumUser();
         }
 
-        public int SumOrders(User IDOFUSER)
+    public Aggregetion SumOrders(User IDOFUSER)
         {
             return aggregationRepository.SumOrders(IDOFUSER);
         }
 
-        public float SumSalary()
+    public Aggregetion SumSalary()
         {
             return aggregationRepository.SumSalary();
         }
 
-        public float SumSales()
+    public Aggregetion SumSales()
         {
             return aggregationRepository.SumSales();
         }
+
+    public Aggregetion SumSalesDaily(Aggregetion aggregetion)
+    {
+      return aggregationRepository.SumSalesDaily(aggregetion); 
     }
+  }
 }

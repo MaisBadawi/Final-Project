@@ -1,10 +1,11 @@
-﻿using Fashionista.core.Data;
+using Fashionista.core.Data;
 using Fashionista.core.DTO;
 using Fashionista.core.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -24,7 +25,7 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("NumEmp")]
-        public int NumEmp()
+    public Aggregetion NumEmp()
         {
             return aggregationService.NumEmp();
         }
@@ -33,7 +34,7 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("NumOfOrder/{IDOFUSER}")]
-        public int NumOfOrder(User IDOFUSER)
+    public Aggregetion NumOfOrder(User IDOFUSER)
         {
             return aggregationService.NumOfOrder(IDOFUSER);
         }
@@ -42,7 +43,7 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("NumOrderDev/{Id_dev}")]
-        public int NumOrderDev(Order Id_dev)
+    public Aggregetion NumOrderDev(Order Id_dev)
         {
             return aggregationService.NumOrderDev(Id_dev);
         }
@@ -52,7 +53,7 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("NumOrderDevDaily")]
-        public int NumOrderDevDaily(OrderDev orderDev)
+    public Aggregetion NumOrderDevDaily(OrderDev orderDev)
         {
             return aggregationService.NumOrderDevDaily(orderDev);
         }
@@ -63,19 +64,20 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("NumUser")]
-        public int NumUser()
+        public Aggregetion NumUser()
         {
             return aggregationService.NumUser();
         }
 
+   
 
 
 
-        [HttpGet]
+    [HttpGet]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("SumOrders/{IDOFUSER}")]
-        public int SumOrders(User IDOFUSER)
+        public Aggregetion SumOrders(User IDOFUSER)
         {
             return aggregationService.SumOrders(IDOFUSER);
         }
@@ -85,7 +87,7 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(float), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("SumSalary")]
-        public float SumSalary()
+    public Aggregetion SumSalary()
         {
             return aggregationService.SumSalary();
         }
@@ -95,10 +97,20 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(float), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("SumSales")]
-        public float SumSales()
+    public Aggregetion SumSales()
         {
             return aggregationService.SumSales();
         }
 
-    }
+
+      [HttpPost]
+      [ProducesResponseType(typeof(float), StatusCodes.Status200OK)]
+      [ProducesResponseType(StatusCodes.Status400BadRequest)]
+      [Route("SumSalesDaily")]
+    public Aggregetion SumSalesDaily(Aggregetion aggregetion)
+      {
+      return aggregationService.SumSalesDaily(aggregetion);
+      }
+
+  }
 }

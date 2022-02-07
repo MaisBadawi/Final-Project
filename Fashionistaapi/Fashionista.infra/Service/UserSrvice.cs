@@ -1,4 +1,4 @@
-﻿using Fashionista.core.Data;
+using Fashionista.core.Data;
 using Fashionista.core.DTO;
 using Fashionista.core.Repository;
 using Fashionista.core.Service;
@@ -118,7 +118,7 @@ namespace Fashionista.infra.Service
                 var tokenKey = Encoding.ASCII.GetBytes("[SECRET USED TO SIGN AND VERIFY JWT TOKENS, IT CAN BE ANY STRING]");
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
-                    Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name,Convert.ToString(result.Username) ), new Claim(ClaimTypes.Role, Convert.ToString(result.Rol_Id))}),
+                    Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name,Convert.ToString(result.Id) ), new Claim(ClaimTypes.Role, Convert.ToString(result.Rol_Id))}),
                     Expires = DateTime.UtcNow.AddHours(1),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
                 };

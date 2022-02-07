@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
@@ -13,7 +13,7 @@ namespace Fashionista.core.Data
         public DateTime Experd_Date { get; set; }
         public decimal Balanc { get; set; }
         public decimal? User_Id { get; set; }
-
+        public string UpdateCode { get; set; }
         public virtual User User { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Fashionista.core.Data;
+using Fashionista.core.Data;
 using Fashionista.core.DTO;
 using Fashionista.core.Service;
 using Microsoft.AspNetCore.Http;
@@ -84,8 +84,40 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(BalanceDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public BalanceDto SUM_Max_Balance()
-        { return paymentService.SUM_Max_Balance(); }
+        { return paymentService.SUM_Max_Balance();
+
+        }
 
 
+    [HttpGet]
+    [Route("GetVisaByUserID/{User_Id}")]
+    [ProducesResponseType(typeof(Payment), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public Payment Get_Visa_By_UserId(int User_Id)
+    {
+      return paymentService.Get_Visa_By_UserId(User_Id);
     }
+
+    [HttpGet]
+    [Route("UpdateeCode/{userId}")]
+    [ProducesResponseType(typeof(UpdateCode), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public UpdateCode Update_Code(int userId)
+    {
+      return paymentService.Update_Code(userId);
+    }
+
+
+
+    [HttpPost]
+    [Route("UpdateBalance")]
+
+    [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public bool UpdateBalance(UpdateBalance updateBalance)
+    {
+      return paymentService.UpdateBalance(updateBalance);
+    }
+
+  }
 }

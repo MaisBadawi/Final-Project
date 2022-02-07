@@ -1,5 +1,6 @@
 ﻿using Fashionista.core;
 using Fashionista.core.Data;
+using Fashionista.core.Repository;
 using Fashionista.core.Service;
 using System;
 using System.Collections.Generic;

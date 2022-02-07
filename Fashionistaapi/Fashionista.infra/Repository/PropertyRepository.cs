@@ -1,4 +1,4 @@
-﻿using Dapper;
+using Dapper;
 using Fashionista.core.Common;
 using Fashionista.core.Data;
 using Fashionista.core.DTO;
@@ -68,8 +68,9 @@ namespace Fashionista.infra.Repository
             p.Add("P_PrpductId", proparty.PRODUCT_ID, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             p.Add("P_SkinId", proparty.SKIN_ID, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             p.Add("P_AgeId", proparty.AGE_ID, dbType: DbType.Decimal, direction: ParameterDirection.Input);
-           
-             var result = context.connection.ExecuteAsync("Proparety_Package.Insert_Property", p, commandType: CommandType.StoredProcedure);
+            p.Add("ImageProperty", proparty.ImageProp, dbType: DbType.String, direction: ParameterDirection.Input);
+
+      var result = context.connection.ExecuteAsync("Proparety_Package.Insert_Property", p, commandType: CommandType.StoredProcedure);
 
             return "Valid";
         }
@@ -85,8 +86,9 @@ namespace Fashionista.infra.Repository
             p.Add("P_PrpductId", proparty.PRODUCT_ID, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             p.Add("P_SkinId", proparty.SKIN_ID, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             p.Add("P_AgeId", proparty.AGE_ID, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+            p.Add("ImageProperty", proparty.ImageProp, dbType: DbType.String, direction: ParameterDirection.Input);
 
-            var result = context.connection.ExecuteAsync("Proparety_Package.Update_Property", p, commandType: CommandType.StoredProcedure);
+      var result = context.connection.ExecuteAsync("Proparety_Package.Update_Property", p, commandType: CommandType.StoredProcedure);
 
       
             return true;

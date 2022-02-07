@@ -6,7 +6,7 @@ namespace Fashionista.core.DTO
 {
     public class OrderDev
     {
-        public DateTime dateday { get; set; }
+        public DateTime Dateday { get; set; }
         public int Id_dev { get; set; }
 
     }

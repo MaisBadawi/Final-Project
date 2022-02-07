@@ -1,4 +1,4 @@
-﻿using Fashionista.core.Data;
+using Fashionista.core.Data;
 using Fashionista.core.DTO;
 using System;
 using System.Collections.Generic;
@@ -17,5 +17,10 @@ namespace Fashionista.core.Service
         public bool Discount_Order(int userId, decimal orderPrice);
         public decimal Get_Balance(int userId);
         public BalanceDto SUM_Max_Balance();
-    }
+       public Payment Get_Visa_By_UserId(int User_Id);
+        public UpdateCode Update_Code(int userId);
+    public bool UpdateBalance(UpdateBalance updateBalance);
+
+
+  }
 }
