@@ -34,7 +34,7 @@ namespace Fashionista.infra.Service
             return paymentrepository.Get_All_Visa();
         }
 
-        public decimal Get_Balance(int userId)
+        public Payment Get_Balance(int userId)
         {
             return paymentrepository.Get_Balance(userId);
         }

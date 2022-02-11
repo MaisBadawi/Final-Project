@@ -33,10 +33,10 @@ namespace Fashionista.infra.Repository
       return result.FirstOrDefault();
     }
 
-    public Aggregetion NumOfOrder(User IDOFUSER)
-    {
-      var p = new DynamicParameters();
-      p.Add("IDOFUSER", IDOFUSER.Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
+    public Aggregetion NumOfOrder(int IDOFUSER)
+        {//int IDOFUSER
+            var p = new DynamicParameters();
+      p.Add("IDOFUSER", IDOFUSER, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
       var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumOfOrder", p, commandType: CommandType.StoredProcedure);
       return result.FirstOrDefault();
@@ -64,10 +64,10 @@ namespace Fashionista.infra.Repository
 
    
 
-    public Aggregetion SumOrders(User IDOFUSER)
-        {
+    public Aggregetion SumOrders(int IDOFUSER)
+        {//int IDOFUSER
             var p = new DynamicParameters();
-            p.Add("IDOFUSER",IDOFUSER.Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("IDOFUSER",IDOFUSER, dbType: DbType.Int32, direction: ParameterDirection.Input);
            
             var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.SumOrders", p, commandType: CommandType.StoredProcedure);
              return result.FirstOrDefault();
@@ -75,9 +75,9 @@ namespace Fashionista.infra.Repository
 
     public Aggregetion SumSalary()
         {
-       
+            //Query<Aggregetion>
 
-            var result = context.connection.Query("Aggregation_PACKAGE.SumSalary", commandType: CommandType.StoredProcedure);
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.SumSalary", commandType: CommandType.StoredProcedure);
             return result.FirstOrDefault();
     }
 
@@ -98,5 +98,22 @@ namespace Fashionista.infra.Repository
       return result.FirstOrDefault();
     }
 
-  }
+        public Aggregetion NumberOfCard(int IDOFUSER)
+        {
+            var p = new DynamicParameters();
+            p.Add("IDOFUSER", IDOFUSER, dbType: DbType.Int32, direction: ParameterDirection.Input);
+
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumOfCards", p, commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion MyMssg(int IDOFUSER)
+        {
+            var p = new DynamicParameters();
+            p.Add("IDOFUSER", IDOFUSER, dbType: DbType.Int32, direction: ParameterDirection.Input);
+
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.UserMessage", p, commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+    }
 }

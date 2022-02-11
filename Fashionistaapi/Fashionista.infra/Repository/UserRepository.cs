@@ -199,13 +199,22 @@ namespace Fashionista.infra.Repository
 
 
             context.connection.Execute("USERS_PACKAGE.UPDATEUSER", ob, commandType: CommandType.StoredProcedure);
+            
             return true;
-
-
 
         }
 
 
-      
+        public User GetCustomerById(int id)
+        {
+            var p = new DynamicParameters();
+            p.Add("IDOFUSER", id, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            var result = context.connection.Query<User>("USERS_PACKAGE.GETUSERBYID", p, commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+
+        }
+
+
+
     }
 }

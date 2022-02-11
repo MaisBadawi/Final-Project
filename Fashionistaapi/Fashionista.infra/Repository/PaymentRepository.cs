@@ -51,13 +51,13 @@ namespace Fashionista.infra.Repository
             return result.ToList();
         }
 
-        public decimal Get_Balance(int userId)
+        public Payment Get_Balance(int userId)
         {
             var p = new DynamicParameters();
             p.Add("UserId", userId, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
-            Payment result = context.connection.Query<Payment>("Payment_Package.Get_Balance", p, commandType: CommandType.StoredProcedure).SingleOrDefault();
-            return result.Balanc;
+            Payment result = context.connection.Query<Payment>("Payment_Package.Get_Balance", p, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return result;
         }
 
         public Payment Get_Visa_By_Id(int id)

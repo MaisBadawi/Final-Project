@@ -1,4 +1,5 @@
 ﻿using Fashionista.core.Data;
+using Fashionista.core.DTO;
 using Fashionista.core.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -38,9 +39,9 @@ namespace Fashionista.api.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(List<Message>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<MessagesDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public List<Message> GET_All_Msg()
+        public List<MessagesDto> GET_All_Msg()
         {
             return service.Get_All_Msg();
         }

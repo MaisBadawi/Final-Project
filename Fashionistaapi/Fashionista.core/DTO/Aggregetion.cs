@@ -6,8 +6,12 @@ namespace Fashionista.core.DTO
 {
    public class Aggregetion
     {
-        public int NumOfOrder;
+        public int NumOfOrder { get; set; }
         public int SumOrders { get; set; }
+        public int MyCards { get; set; }
+
+        public int MyMsg { get; set; }
+
         public int NumEmp { get; set; }
         public int NumUser { get; set; }
         public float SumSalary { get; set; }

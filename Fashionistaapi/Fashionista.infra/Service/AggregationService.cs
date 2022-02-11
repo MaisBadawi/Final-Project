@@ -17,12 +17,22 @@ namespace Fashionista.infra.Service
             this.aggregationRepository = aggregationRepository;
         }
 
-    public Aggregetion NumEmp()
+        public Aggregetion MyMssg(int IDOFUSER)
+        {
+            return aggregationRepository.MyMssg(IDOFUSER);
+        }
+
+        public Aggregetion NumberOfCard(int IDOFUSER)
+        {
+            return aggregationRepository.NumberOfCard(IDOFUSER);
+        }
+
+        public Aggregetion NumEmp()
         {
             return aggregationRepository.NumEmp();
         }
 
-    public Aggregetion NumOfOrder(User IDOFUSER)
+    public Aggregetion NumOfOrder(int IDOFUSER)
         {
             return aggregationRepository.NumOfOrder(IDOFUSER);
         }
@@ -42,7 +52,7 @@ namespace Fashionista.infra.Service
             return aggregationRepository.NumUser();
         }
 
-    public Aggregetion SumOrders(User IDOFUSER)
+    public Aggregetion SumOrders(int IDOFUSER)
         {
             return aggregationRepository.SumOrders(IDOFUSER);
         }

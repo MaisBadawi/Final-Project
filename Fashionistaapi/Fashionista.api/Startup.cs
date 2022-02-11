@@ -101,6 +101,10 @@ namespace Fashionista.api
 
             services.AddScoped<IAggregationRepository, AggregationRepository>(); //15. Aggregation
             services.AddScoped<IAggregationService, AggregationService> ();//
+
+            services.AddScoped<IMailRepository, MailRepository>(); //15. Aggregation
+            services.AddScoped<IMailService, MailService>();//
+
             services.AddControllers();
             
         }

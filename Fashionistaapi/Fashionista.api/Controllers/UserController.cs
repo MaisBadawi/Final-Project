@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -38,7 +39,7 @@ namespace Fashionista.api.Controllers
             return userService.INSERTUSER(user);
         }
 
-        [HttpPost]
+        [HttpPut]
         [Route("UpdateUser")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -130,7 +131,7 @@ namespace Fashionista.api.Controllers
 
         [HttpPost]
         [Route("Auth")]
-     
+        
         public IActionResult Auth([FromBody] User user)
         {
             var item =userService.Auth(user);
@@ -145,6 +146,49 @@ namespace Fashionista.api.Controllers
 
 
         }
+
+
+        [HttpGet]
+        [Route("GetUserById/{id}")]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public User GetCustomerById(int id)
+        { return userService.GetCustomerById(id); }
+
+
+        [HttpPut]
+        [Route("uploadImage")]
+        public User UploadImage()
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                byte[] fileImageContent;
+                using (var memory = new MemoryStream())
+                {
+                    file.CopyTo(memory);
+                    fileImageContent = memory.ToArray();
+                }
+                var fileName = Path.GetFileNameWithoutExtension(file.FileName);
+                string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
+
+                string path = Path.Combine("C:\\Users\\iMSI\\Desktop\\Last Angular\\Final-project\\FinalTask\\Task\\src\\assets\\Images", imageFileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+
+                return new User()
+                {
+                    Image_Path = imageFileName
+                };
+            }
+            catch (FileLoadException)
+            {
+                return null;
+            }
+        }
+
 
 
 

@@ -127,5 +127,10 @@ namespace Fashionista.infra.Service
                 return tokenHandler.WriteToken(token);
             }
         }
+
+        public User GetCustomerById(int id)
+        {
+            return userRepository.GetCustomerById(id);
+        }
     }
 }

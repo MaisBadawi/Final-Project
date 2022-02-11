@@ -72,11 +72,11 @@ namespace Fashionista.api.Controllers
 
 
         [HttpGet]
-        [Route("GetBalance/{userId}")]
-        [ProducesResponseType(typeof(decimal), StatusCodes.Status200OK)]
+        [Route("GetBalance/{id}")]
+        [ProducesResponseType(typeof(Payment), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public decimal Get_Balance(int userId)
-        { return paymentService.Get_Balance(userId); }
+        public Payment Get_Balance(int id)
+        { return paymentService.Get_Balance(id); }
 
         
         [HttpGet]

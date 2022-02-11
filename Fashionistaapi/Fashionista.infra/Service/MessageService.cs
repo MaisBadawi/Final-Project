@@ -1,4 +1,5 @@
 ﻿using Fashionista.core.Data;
+using Fashionista.core.DTO;
 using Fashionista.core.Repository;
 using Fashionista.core.Service;
 using System;
@@ -21,7 +22,7 @@ namespace Fashionista.infra.Service
             return msgRepository.Delete_Msg(id);
         }
 
-        public List<Message> Get_All_Msg()
+        public List<MessagesDto> Get_All_Msg()
         {
             return msgRepository.Get_All_Msg();
         }

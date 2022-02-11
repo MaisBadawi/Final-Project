@@ -20,5 +20,7 @@ namespace Fashionista.core.Service
         public string Auth(User user);
         public bool Check_Username(Auth auth);
         public bool Changepass(Auth auth);
+
+        public User GetCustomerById(int id);
     }
 }

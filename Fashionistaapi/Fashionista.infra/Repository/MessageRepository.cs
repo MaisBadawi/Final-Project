@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Fashionista.core.Common;
 using Fashionista.core.Data;
+using Fashionista.core.DTO;
 using Fashionista.core.Repository;
 using System;
 using System.Collections.Generic;
@@ -26,9 +27,9 @@ namespace Fashionista.infra.Repository
             return true;
         }
 
-        public List<Message> Get_All_Msg()
+        public List<MessagesDto> Get_All_Msg()
         {
-            IEnumerable<Message> result = context.connection.Query<Message>("Massege_Package.Get_All_Msg", commandType: CommandType.StoredProcedure);
+            IEnumerable<MessagesDto> result = context.connection.Query<MessagesDto>("Massege_Package.Get_All_Msg", commandType: CommandType.StoredProcedure);
             return result.ToList();
         }
 

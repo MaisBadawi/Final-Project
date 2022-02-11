@@ -22,6 +22,8 @@ namespace Fashionista.core.Repository
         public User Changepass(Auth auth);
         public User Auth(User user);
 
+        public User GetCustomerById(int id);
+
 
     }
 }

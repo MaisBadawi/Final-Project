@@ -9,9 +9,12 @@ namespace Fashionista.core.Repository
     public interface IAggregationRepository
     {
 
-    public Aggregetion NumOfOrder(User IDOFUSER );
-    public Aggregetion SumOrders(User IDOFUSER );
-    public Aggregetion NumEmp();
+         public Aggregetion NumOfOrder(int IDOFUSER );
+    public Aggregetion SumOrders(int IDOFUSER );
+        public Aggregetion NumberOfCard(int IDOFUSER);
+        public Aggregetion MyMssg(int IDOFUSER);
+
+        public Aggregetion NumEmp();
     public Aggregetion NumUser();
     public Aggregetion SumSalary();
     public Aggregetion SumSalesDaily(Aggregetion aggregetion);
