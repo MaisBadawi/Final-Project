@@ -132,5 +132,10 @@ namespace Fashionista.infra.Service
         {
             return userRepository.GetCustomerById(id);
         }
+
+        public Employee GetEmployeeById(int id)
+        {
+            return userRepository.GetEmployeeById(id);
+        }
     }
 }

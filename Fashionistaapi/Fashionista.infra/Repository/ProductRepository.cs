@@ -66,9 +66,9 @@ namespace Fashionista.infra.Repository
             return true;
         }
 
-        public List<Product> GetAll_Product()
+        public List<ProductDto> GetAll_Product()
         {
-            IEnumerable<Product> result = context.connection.Query<Product>("Product_Package.GetAll_Product", commandType: CommandType.StoredProcedure);
+            IEnumerable<ProductDto> result = context.connection.Query<ProductDto>("Product_Package.GetAll_Product", commandType: CommandType.StoredProcedure);
 
             return result.ToList();
         }

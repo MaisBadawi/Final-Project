@@ -16,6 +16,21 @@ namespace Fashionista.infra.Service
             this.testimonialRepository = testimonialRepository;
         }
 
+        public bool AcceptTestimonial(int id)
+        {
+            return testimonialRepository.AcceptTestimonial(id);
+        }
+
+        public List<GetAllTestamonialDto> AllAcceptTestimonial()
+        {
+            return testimonialRepository.AllAcceptTestimonial();
+        }
+
+        public List<GetAllTestamonialDto> AllRejectTestimonial()
+        {
+            return testimonialRepository.AllRejectTestimonial();
+        }
+
         public bool Delete_Testimonial(int id)
         {
             return testimonialRepository.Delete_Testimonial(id);
@@ -40,6 +55,11 @@ namespace Fashionista.infra.Service
         {
             return testimonialRepository.Insert_Testimonial(testamonial);
         }
+
+        public bool RejectTestimonial(int id)
+        {
+            return testimonialRepository.RejectTestimonial(id);
+         }
 
         public bool Update_Testimonial(Testimonial testamonial)
         {

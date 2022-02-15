@@ -13,5 +13,13 @@ namespace Fashionista.core.Repository
         public bool Update_Msg(Message msg);
         public List<MessagesDto> Get_All_Msg();
         public Message Get_Msg_By_Id(int id);
+
+        public bool Update_StatusById(int idOfMsg);
+
+        public ReadMsgDto NumOfReadMsg();
+        public UnReadMsgDto NumOfUnReadMsg();
+
+
+
     }
 }

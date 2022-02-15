@@ -81,7 +81,7 @@ namespace Fashionista.api.Controllers
         }
 
 
-        [HttpPost]
+        [HttpGet]
         [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("NumOrderDevDaily")]
@@ -122,7 +122,7 @@ namespace Fashionista.api.Controllers
         }
 
 
-      [HttpPost]
+      [HttpGet]
       [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
       [ProducesResponseType(StatusCodes.Status400BadRequest)]
       [Route("SumSalesDaily")]

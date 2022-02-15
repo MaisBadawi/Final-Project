@@ -64,5 +64,35 @@ namespace Fashionista.api.Controllers
             return service.Delete_Msg(id);
         }
 
+        [HttpGet]
+        [Route ("UpdateStatus/{idOfMsg}")]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public bool Update_StatusById(int idOfMsg)
+        {
+            return service.Update_StatusById(idOfMsg);
+        }
+
+
+
+        [HttpGet]
+        [Route("ReadMsg")]
+        [ProducesResponseType(typeof(ReadMsgDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ReadMsgDto NumOfReadMsg()
+        {
+            return service.NumOfReadMsg();
+        }
+
+
+        [HttpGet]
+        [Route("UnReadMsg")]
+        [ProducesResponseType(typeof(UnReadMsgDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public UnReadMsgDto NumOfUnReadMsg()
+        {
+            return service.NumOfUnReadMsg();
+        }
+
     }
 }

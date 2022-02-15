@@ -14,5 +14,14 @@ namespace Fashionista.core.Repository
         public List<GetAllTestamonialDto> GET_All_TestimonialForAdmin();
         public List<GetAllTestamonialDto> GET_All_TestimonialForCustm();
         public Testimonial Get_Testimonial_By_Id(int id);
+        public bool AcceptTestimonial(int id);
+        public bool RejectTestimonial(int id);
+
+        public List<GetAllTestamonialDto> AllAcceptTestimonial();
+        public List<GetAllTestamonialDto> AllRejectTestimonial();
     }
 }
+
+
+
+

@@ -13,6 +13,8 @@ namespace Fashionista.core.Repository
         public bool UPDATEUSER(User user);
 
         public List<Employee> GetAllEmployee();
+        public Employee GetEmployeeById(int id);
+
         public List<Customer> GetAllCustomer();
 
         public List<Employee> SearchEmployeeBYName(string EmpName );

@@ -12,7 +12,7 @@ namespace Fashionista.core.Service
         public bool Delete_Product(int id);
 
         public bool Update_Product(Product product);
-        public List<Product> GetAll_Product();
+        public List<ProductDto> GetAll_Product();
         public Product GetProduct_ID(int id);
 
         public List<GetProductByInfo> GetProduct_Category(PersonInfoDto product);

@@ -64,5 +64,26 @@ namespace Fashionista.infra.Service
         {
             return ordersRepository.Update_Order(order);
         }
+
+
+      public  List<OrderAdmin> Get_All_Orders()
+        {
+            return ordersRepository.Get_All_Orders();
+        }
+
+        public List<OrderAdmin> Get_Daily_Orders(DateTime numOfDay)
+        {
+            return ordersRepository.Get_Daily_Orders(numOfDay);
+        }
+
+        public List<OrderAdmin> Get_Monthly_Orders(int numOfMonth)
+        {
+            return ordersRepository.Get_Monthly_Orders(numOfMonth);
+        }
+
+        public List<OrderAdmin> Get_Yearly_Orders(int numOfYear)
+        {
+            return ordersRepository.Get_Yearly_Orders(numOfYear);
+        }
     }
 }

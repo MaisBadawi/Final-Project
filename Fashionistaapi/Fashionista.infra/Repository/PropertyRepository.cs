@@ -37,6 +37,14 @@ namespace Fashionista.infra.Repository
             return result.ToList();
         }
 
+
+        public List<GetPropertyDto> GetAll_AvailabelProperty()
+        {
+            IEnumerable<GetPropertyDto> result = context.connection.Query<GetPropertyDto>("Proparety_Package.GetAll_AvilabelProperty", commandType: CommandType.StoredProcedure);
+
+            return result.ToList();
+        }
+
         public GetPropertyDto GetProperty_ID(int id)
         {
             var p = new DynamicParameters();
@@ -105,6 +113,28 @@ namespace Fashionista.infra.Repository
             return true;
         }
 
-        
+
+        public List<GetPropertyDto> GetByName(string name)
+        {
+            var p = new DynamicParameters();
+            p.Add("P_Name", name, dbType: DbType.String, direction: ParameterDirection.Input);
+            IEnumerable<GetPropertyDto> result = context.connection.Query<GetPropertyDto>("Proparety_Package.SearchByName_Property",p, commandType: CommandType.StoredProcedure);
+
+            return result.ToList();
+        }
+
+        public List<NewestProductDto> GetNewestProperty()
+        {
+            IEnumerable<NewestProductDto> result = context.connection.Query<NewestProductDto>("Product_Package.NewestProducts", commandType: CommandType.StoredProcedure);
+
+            return result.ToList();
+        }
+
+        public List<GetPropertyDto> GetSoldoutProperty()
+        {
+            IEnumerable<GetPropertyDto> result = context.connection.Query<GetPropertyDto>("Proparety_Package.GetSoldout_Property", commandType: CommandType.StoredProcedure);
+
+            return result.ToList();
+        }
     }
 }

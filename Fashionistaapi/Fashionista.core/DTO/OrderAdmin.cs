@@ -13,6 +13,7 @@ namespace Fashionista.core.DTO
         public float TotalPrice { get; set; }
         public DateTime Date { get; set; }
         public string DeliveryName { get; set; }
-        
+        public Decimal Status { get; set; }
+
     }
 }

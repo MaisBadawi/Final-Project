@@ -22,7 +22,7 @@ namespace Fashionista.api.Controllers
         }
 
 
-       
+
         [HttpDelete]
         [Route("DeleteOrder/{Id}")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
@@ -38,18 +38,18 @@ namespace Fashionista.api.Controllers
         [Route("DisplayOrderBetweenDateAdmin")]
         [ProducesResponseType(typeof(List<OrderAdmin>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public List<OrderAdmin> GetOrder_BetweenDate([FromBody]SearchDate date)
+        public List<OrderAdmin> GetOrder_BetweenDate([FromBody] SearchDate date)
         {
             return orderService.GetOrder_BetweenDate(date);
         }
-        
 
-        
+
+
         [HttpPost]
         [Route("DisplayOrderBetweenDateUser")]
         [ProducesResponseType(typeof(List<OrderU>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public List<OrderU> GetOrder_BetweenDate_User([FromBody]SearchDateUser date)
+        public List<OrderU> GetOrder_BetweenDate_User([FromBody] SearchDateUser date)
         {
             return orderService.GetOrder_BetweenDate_User(date);
         }
@@ -125,10 +125,49 @@ namespace Fashionista.api.Controllers
         [Route("EditOrder")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public bool Update_Order([FromBody]Order order)
+        public bool Update_Order([FromBody] Order order)
         {
             return orderService.Update_Order(order);
         }
 
+
+
+        [HttpGet]
+        [Route("GetAllOrders")]
+        [ProducesResponseType(typeof(List<OrderAdmin>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<OrderAdmin> Get_All_Orders()
+        {
+            return orderService.Get_All_Orders();
+        }
+
+        [HttpGet]
+        [Route("GetDialyOrders/{numOfDay}")]
+        [ProducesResponseType(typeof(List<OrderAdmin>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<OrderAdmin> Get_Daily_Orders(DateTime numOfDay)
+        {
+            return orderService.Get_Daily_Orders(numOfDay);
+        }
+
+
+        [HttpGet]
+        [Route("GetMonthlyOrders/{numOfMonth}")]
+        [ProducesResponseType(typeof(List<OrderAdmin>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<OrderAdmin> Get_Monthly_Orders(int numOfMonth)
+        {
+            return orderService.Get_Monthly_Orders(numOfMonth);
+        }
+
+        [HttpGet]
+        [Route("GetAnnualyOrders/{numOfYear}")]
+        [ProducesResponseType(typeof(List<OrderAdmin>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+        public List<OrderAdmin> Get_Annual_Orders(int numOfYear)
+        {
+            return orderService.Get_Yearly_Orders(numOfYear);
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace Fashionista.infra.Service
         public bool Update_Product(Product product)
         { return productService.Update_Product(product); }
 
-        public List<Product> GetAll_Product()
+        public List<ProductDto> GetAll_Product()
         { return productService.GetAll_Product(); }
 
         public Product GetProduct_ID(int id)

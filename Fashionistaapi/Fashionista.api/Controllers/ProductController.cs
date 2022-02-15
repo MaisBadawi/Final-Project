@@ -49,9 +49,9 @@ namespace Fashionista.api.Controllers
         
         [HttpGet]
         [Route("AllProduct")]
-        [ProducesResponseType(typeof(List<Product>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<ProductDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public List<Product> GetAll_Product()
+        public List<ProductDto> GetAll_Product()
         { return productService.GetAll_Product(); }
 
       

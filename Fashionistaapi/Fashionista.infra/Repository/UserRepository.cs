@@ -138,6 +138,8 @@ namespace Fashionista.infra.Repository
             {
                 ob.Add("COLOROFUSER", null, dbType: DbType.String, direction: ParameterDirection.Input);
                 ob.Add("SALARYOFUSER", user.Salary, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+                ob.Add("deductuinvalue", user.DEDUCTION, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+
                 ob.Add("HEIGHTOFUSER", null, dbType: DbType.Int32, direction: ParameterDirection.Input);
                 ob.Add("WEIGHTOFUSER", null, dbType: DbType.Int32, direction: ParameterDirection.Input);
                 ob.Add("U_LX", null, dbType: DbType.String, direction: ParameterDirection.Input);
@@ -191,6 +193,8 @@ namespace Fashionista.infra.Repository
             ob.Add("UAge", user.Age, dbType: DbType.Decimal, direction: ParameterDirection.Input);
 
             ob.Add("SALARYOFUSER", user.Salary, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+            ob.Add("deductuinvalue", user.DEDUCTION, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+
             ob.Add("HEIGHTOFUSER", user.Height, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             ob.Add("WEIGHTOFUSER", user.Weight, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             ob.Add("U_LX", user.Lx, dbType: DbType.String, direction: ParameterDirection.Input);
@@ -214,7 +218,12 @@ namespace Fashionista.infra.Repository
 
         }
 
-
-
+        public Employee GetEmployeeById(int id)
+        {
+            var p = new DynamicParameters();
+            p.Add("P_ID", id, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            var result = context.connection.Query<Employee>("USERS_PACKAGE.GetEmployeeById", p, commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
     }
 }

@@ -25,6 +25,8 @@ namespace Fashionista.core.Data
         public string Address { get; set; }
         public string Image_Path { get; set; }
         public decimal? Salary { get; set; }
+        public decimal? DEDUCTION { get; set; }
+
         public decimal? Height { get; set; }
         public string SkinColor { get; set; }
         public decimal? Weight { get; set; }

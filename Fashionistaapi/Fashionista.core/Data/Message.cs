@@ -11,6 +11,7 @@ namespace Fashionista.core.Data
         public decimal CUSTOMER_ID { get; set; }
         public string MESSG { get; set; }
         public string RECIVER { get; set; }
+        public decimal STATUS { get; set; }
 
         public virtual User Customer { get; set; }
     }

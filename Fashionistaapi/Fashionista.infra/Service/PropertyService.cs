@@ -38,7 +38,8 @@ namespace Fashionista.infra.Service
 
         public string Insert_Property(Property proparty)
         {
-            return propertyService.Insert_Property(proparty);        }
+            return propertyService.Insert_Property(proparty);
+        }
 
         public bool Update_Property(Property proparty)
         {
@@ -48,6 +49,28 @@ namespace Fashionista.infra.Service
         public bool Update_Quantity(int id, int quantity)
         {
             return propertyService.Update_Quantity(id,quantity);
+        }
+
+        public List<GetPropertyDto> GetAll_AvailabelProperty()
+        {
+            return propertyService.GetAll_AvailabelProperty();
+        }
+
+
+        public List<GetPropertyDto> GetByName(string name)
+        {
+            return propertyService.GetByName(name);
+        }
+
+
+        public List<NewestProductDto> GetNewestProperty()
+        {
+            return propertyService.GetNewestProperty();
+        }
+
+        public List<GetPropertyDto> GetSoldoutProperty()
+        {
+            return propertyService.GetSoldoutProperty();
         }
     }
 }

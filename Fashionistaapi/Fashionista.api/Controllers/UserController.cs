@@ -156,6 +156,18 @@ namespace Fashionista.api.Controllers
         { return userService.GetCustomerById(id); }
 
 
+        [HttpGet]
+        [Route("GetEmployeeById/{id}")]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public Employee GetEmployeeById(int id)
+        {
+            return userService.GetEmployeeById(id);
+        }
+
+
+
+
         [HttpPut]
         [Route("uploadImage")]
         public User UploadImage()

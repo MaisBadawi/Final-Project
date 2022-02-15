@@ -11,12 +11,21 @@ namespace Fashionista.core.Repository
         public bool Insert_Order(Order order);
         public bool Delete_Order(int Id_Order );
         public bool Update_Order(Order order);
-        List<OrderAdmin> Get_All_CompletedOrders();
-        List<OrderAdmin> Get_All_NotCompletedOrders();
-        List<OrderU> Get_AllOrder_User(int CUST_ID );
-        List<OrderU> Get_NotCompletedOrders_User(int CUST_ID  );
-        List<OrderAdmin> GetOrder_BetweenDate(SearchDate date);
-        List<OrderU> GetOrder_BetweenDate_User(SearchDateUser date);
-        List<DetailsOrder> Get_DetailsOrder(int ID_Order  );
+        public List<OrderAdmin> Get_All_CompletedOrders();
+        public List<OrderAdmin> Get_All_NotCompletedOrders();
+        public List<OrderU> Get_AllOrder_User(int CUST_ID );
+        public List<OrderU> Get_NotCompletedOrders_User(int CUST_ID  );
+        public List<OrderAdmin> GetOrder_BetweenDate(SearchDate date);
+        public List<OrderU> GetOrder_BetweenDate_User(SearchDateUser date);
+        public List<DetailsOrder> Get_DetailsOrder(int ID_Order  );
+
+        public List<OrderAdmin> Get_All_Orders();
+
+        public List<OrderAdmin> Get_Daily_Orders(DateTime numOfDay);
+
+        public List<OrderAdmin> Get_Monthly_Orders(int numOfMonth);
+
+        public List<OrderAdmin> Get_Yearly_Orders(int numOfYear);
+
     }
 }

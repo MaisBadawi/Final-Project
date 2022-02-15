@@ -15,6 +15,13 @@ namespace Fashionista.core.Repository
         public List<GetPropertyDto> GetAll_Property( );
         public GetPropertyDto GetProperty_ID(int id);
         public List<GetPropertyDto> GetProperty_IDProduct(Property proparty);
+        public List<GetPropertyDto> GetAll_AvailabelProperty();
+        public List<GetPropertyDto> GetByName(string name);
+
+        public List<NewestProductDto> GetNewestProperty();
+
+        public List<GetPropertyDto> GetSoldoutProperty();
+
 
     }
 }

@@ -72,5 +72,45 @@ namespace Fashionista.api.Controllers
         public GetPropertyDto GetProperty_ID(int id)
         { return productService.GetProperty_ID(id); }
 
+
+
+        [HttpGet]
+        [Route("GetAvailabel")]
+        [ProducesResponseType(typeof(List<GetPropertyDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<GetPropertyDto> GetAll_AvailabelProperty()
+        { return productService.GetAll_AvailabelProperty(); }
+
+
+
+
+        [HttpGet]
+        [Route("GetByName/{name}")]
+        [ProducesResponseType(typeof(List<GetPropertyDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<GetPropertyDto> GetByName(string name)
+        {
+            return productService.GetByName(name);
+        }
+
+
+        [HttpGet]
+        [Route("GetNewest")]
+        [ProducesResponseType(typeof(List<NewestProductDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<NewestProductDto> GetNewestProperty()
+        {
+            return productService.GetNewestProperty();
+        }
+
+        [HttpGet]
+        [Route("Soldout")]
+        [ProducesResponseType(typeof(List<GetPropertyDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<GetPropertyDto> GetSoldoutProperty()
+        {
+            return productService.GetSoldoutProperty();
+        }
+
     }
 }

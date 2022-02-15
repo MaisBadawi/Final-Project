@@ -83,11 +83,9 @@ namespace Fashionista.infra.Repository
 
     public Aggregetion SumSales()
         {
-          
-
-            var result = context.connection.Query("Aggregation_PACKAGE.SumSales",  commandType: CommandType.StoredProcedure);
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.SumSales",  commandType: CommandType.StoredProcedure);
             return result.FirstOrDefault();
-    }
+        }
 
     public Aggregetion SumSalesDaily(Aggregetion aggregetion)
     {

@@ -74,5 +74,36 @@ namespace Fashionista.api.Controllers
         {
             return service.Update_Testimonial(testamonial);
         }
+
+
+        [HttpGet]
+        [Route("AcceptTestimonial/{id}")]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public bool AcceptTestimonial(int id)
+        {
+            return service.AcceptTestimonial(id);
+        }
+
+
+        [HttpGet]
+        [Route("AllRejectTestimonial")]
+        [ProducesResponseType(typeof(List<GetAllTestamonialDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<GetAllTestamonialDto> AllRejectTestimonial()
+        {
+            return service.AllRejectTestimonial();
+        }
+
+
+        [HttpGet]
+        [Route("AllAcceptTestimonial")]
+        [ProducesResponseType(typeof(List<GetAllTestamonialDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<GetAllTestamonialDto> AllAccepTestimonial()
+        {
+            return service.AllAcceptTestimonial();
+        }
+
     }
 }

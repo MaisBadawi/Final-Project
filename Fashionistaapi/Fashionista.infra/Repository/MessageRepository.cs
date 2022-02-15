@@ -49,8 +49,21 @@ namespace Fashionista.infra.Repository
             p.Add("M_Cust_Id", msg.CUSTOMER_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("Msg", msg.MESSG, dbType: DbType.String, direction: ParameterDirection.Input);
             p.Add("Reciv", msg.RECIVER, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("M_Cust_Id", msg.CUSTOMER_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
             var result = context.connection.ExecuteAsync("Massege_Package.Insert_Msg", p, commandType: CommandType.StoredProcedure);
             return "valid";
+        }
+
+        public ReadMsgDto NumOfReadMsg()
+        {
+            var result = context.connection.Query<ReadMsgDto>("Massege_Package.Get_Num_ReadMsg", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public UnReadMsgDto NumOfUnReadMsg()
+        {
+            var result = context.connection.Query<UnReadMsgDto>("Massege_Package.Get_Num_UnReadMsg", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
         }
 
         public bool Update_Msg(Message msg)
@@ -65,5 +78,19 @@ namespace Fashionista.infra.Repository
             var result = context.connection.ExecuteAsync("Massege_Package.Update_Msg", p, commandType: CommandType.StoredProcedure);
             return true;
         }
+
+
+        public bool Update_StatusById(int idOfMsg)
+        {
+            var p = new DynamicParameters();
+
+            p.Add("M_ID", idOfMsg, dbType: DbType.Int32, direction: ParameterDirection.Input);
+
+            var result = context.connection.ExecuteAsync("Massege_Package.Update_StatusById", p, commandType: CommandType.StoredProcedure);
+            return true;
+        }
+
+
+
     }
 }

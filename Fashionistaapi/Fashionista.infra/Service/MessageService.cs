@@ -37,9 +37,25 @@ namespace Fashionista.infra.Service
             return msgRepository.Insert_Msg(msg);
         }
 
+        public ReadMsgDto NumOfReadMsg()
+        {
+            return msgRepository.NumOfReadMsg();
+        }
+
+        public UnReadMsgDto NumOfUnReadMsg()
+        {
+            return msgRepository.NumOfUnReadMsg();
+        }
+
         public bool Update_Msg(Message msg)
         {
             return msgRepository.Update_Msg(msg);
+        }
+
+
+        public bool Update_StatusById(int idOfMsg)
+        {
+            return msgRepository.Update_StatusById(idOfMsg);
         }
     }
 }
