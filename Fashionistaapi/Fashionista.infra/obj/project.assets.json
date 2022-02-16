@@ -7193,19 +7193,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\iMSI\\.nuget\\packages\\": {}
+    "C:\\Users\\rama khazaaleh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iMSI\\Desktop\\Last APi\\Final-Project\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj",
+      "projectUniqueName": "C:\\Users\\rama khazaaleh\\Desktop\\newproject\\Final-Project\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj",
       "projectName": "Fashionista.infra",
-      "projectPath": "C:\\Users\\iMSI\\Desktop\\Last APi\\Final-Project\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj",
-      "packagesPath": "C:\\Users\\iMSI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iMSI\\Desktop\\Last APi\\Final-Project\\Fashionistaapi\\Fashionista.infra\\obj\\",
+      "projectPath": "C:\\Users\\rama khazaaleh\\Desktop\\newproject\\Final-Project\\Fashionistaapi\\Fashionista.infra\\Fashionista.infra.csproj",
+      "packagesPath": "C:\\Users\\rama khazaaleh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rama khazaaleh\\Desktop\\newproject\\Final-Project\\Fashionistaapi\\Fashionista.infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\iMSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rama khazaaleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7219,8 +7219,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\iMSI\\Desktop\\Last APi\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
-              "projectPath": "C:\\Users\\iMSI\\Desktop\\Last APi\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj"
+            "C:\\Users\\rama khazaaleh\\Desktop\\newproject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
+              "projectPath": "C:\\Users\\rama khazaaleh\\Desktop\\newproject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj"
             }
           }
         }
@@ -7275,7 +7275,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

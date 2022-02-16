@@ -20,6 +20,18 @@ namespace Fashionista.core.DTO
         public int NumOrderDev { get; set; }
         public int NumOrderDevDaily { get; set; }
         public DateTime dateDatesales { get; set; }
+        public string A_year { get; set; }
+        public string A_month { get; set; }
+        public int SalesMonthly { get; set; }
+        public int SalesYearly { get; set; }
+        public int OrderDaily { get; set; }
+        public int NumProCurrently { get; set; }
+        public int NumProSoldD { get; set; }
+        public int NumProSoldM { get; set; }
+        public int NumProSoldY { get; set; }
+        public int NumProSoldBetweenDate { get; set; }
+        public int SumSalAfterDed { get; set; }
+        public int NumSMSNew { get; set; }
 
-  }
+    }
 }

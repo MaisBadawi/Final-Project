@@ -106,7 +106,7 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("SumSalary")]
-    public Aggregetion SumSalary()
+         public Aggregetion SumSalary()
         {
             return aggregationService.SumSalary();
         }
@@ -116,7 +116,7 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("SumSales")]
-    public Aggregetion SumSales()
+        public Aggregetion SumSales()
         {
             return aggregationService.SumSales();
         }
@@ -126,10 +126,104 @@ namespace Fashionista.api.Controllers
       [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
       [ProducesResponseType(StatusCodes.Status400BadRequest)]
       [Route("SumSalesDaily")]
-    public Aggregetion SumSalesDaily(Aggregetion aggregetion)
+       public Aggregetion SumSalesDaily()
       {
-          return aggregationService.SumSalesDaily(aggregetion);
+          return aggregationService.SumSalesDaily();
       }
 
-  }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumOrdersDaily")]
+        public Aggregetion NumOrdersDaily()
+        {
+            return aggregationService.NumOrdersDaily();
+        }
+
+        [HttpPost]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("SalesMonthly")]
+        public Aggregetion SalesMonthly(Aggregetion ag)
+        {
+            return aggregationService.SalesMonthly(ag);
+        }
+
+
+        [HttpPost]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("SalesYearly")]
+        public Aggregetion SalesYearly(Aggregetion ag)
+        {
+            return aggregationService.SalesYearly(ag);
+        }
+        [HttpGet]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumAllProductCurrently")]
+        public Aggregetion NumAllProductCurrently()
+        {
+            return aggregationService.NumAllProductCurrently();
+        }
+
+        [HttpPost]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumProductsSoldBetweenDates")]
+        public Aggregetion NumProductsSoldBetweenDates(DateTime DateFrom, DateTime DateTo)
+        {
+            return aggregationService.NumProductsSoldBetweenDates(DateFrom, DateTo);
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumProductsSoldDaily")]
+        public Aggregetion NumProductsSoldDaily()
+        {
+            return aggregationService.NumProductsSoldDaily();
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumProductsSoldMonthly")]
+        public Aggregetion NumProductsSoldMonthly()
+        {
+            return aggregationService.NumProductsSoldMonthly();
+        }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumProductsSoldYearly")]
+        public Aggregetion NumProductsSoldYearly()
+        {
+            return aggregationService.NumProductsSoldYearly();
+        }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumSMSNew")]
+        public Aggregetion NumSMSNew()
+        {
+            return aggregationService.NumSMSNew();
+        }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("SumSalAfterDed")]
+        public Aggregetion SumSalAfterDed()
+        {
+            return aggregationService.SumSalAfterDed();
+        }
+    }
 }

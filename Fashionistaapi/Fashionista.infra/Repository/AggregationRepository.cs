@@ -87,12 +87,11 @@ namespace Fashionista.infra.Repository
             return result.FirstOrDefault();
         }
 
-    public Aggregetion SumSalesDaily(Aggregetion aggregetion)
+    public Aggregetion SumSalesDaily()
     {
-      var p = new DynamicParameters();
-       p.Add("Datesales",aggregetion.dateDatesales, dbType: DbType.Date, direction: ParameterDirection.Input);
+     
 
-      var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.SumSalesDaily", p, commandType: CommandType.StoredProcedure);
+      var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.SumSalesDaily", commandType: CommandType.StoredProcedure);
       return result.FirstOrDefault();
     }
 
@@ -113,5 +112,85 @@ namespace Fashionista.infra.Repository
             var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.UserMessage", p, commandType: CommandType.StoredProcedure);
             return result.FirstOrDefault();
         }
+
+
+        public Aggregetion SalesMonthly(Aggregetion ag)
+        {
+            var p = new DynamicParameters();
+            p.Add("A_year", ag.A_year, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("A_month", ag.A_month, dbType: DbType.String, direction: ParameterDirection.Input);
+
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.SalesMonthly", p, commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion SalesYearly(Aggregetion ag)
+        {
+            var p = new DynamicParameters();
+            p.Add("A_year", ag.A_year, dbType: DbType.String, direction: ParameterDirection.Input);
+
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.SalesYearly", p, commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion NumOrdersDaily()
+        {
+
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumOrdersDaily", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion NumAllProductCurrently()
+        {
+
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumAllProductCurrently", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion NumProductsSoldDaily()
+        {
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumProductsSoldDaily", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion NumProductsSoldMonthly()
+        {
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumProductsSoldMonthly", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion NumProductsSoldYearly()
+        {
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumProductsSoldYearly", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion NumProductsSoldBetweenDates(DateTime DateFrom, DateTime DateTo)
+        {
+            var p = new DynamicParameters();
+            p.Add("DateFrom", DateFrom, dbType: DbType.Date, direction: ParameterDirection.Input);
+            p.Add("DateTo", DateTo, dbType: DbType.Date, direction: ParameterDirection.Input);
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumProductsSoldBetweenDates", p, commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion NumSMSNew()
+        {
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumSMSNew", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+       
+
+        public Aggregetion SumSalAfterDed()
+        {
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.SumSalAfterDed", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+       
+
+
+
     }
 }
