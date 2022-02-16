@@ -112,5 +112,54 @@ namespace Fashionista.api.Controllers
             return productService.GetSoldoutProperty();
         }
 
+
+
+        [HttpGet]
+        [Route("GetPropDetails")]
+        [ProducesResponseType(typeof(DetailsProp), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<DetailsProp> GetPropDetails()
+        {
+            return productService.GetPropDetails();
+        }
+
+
+        [HttpPost]
+        [Route("GetPropDetailsBetweenDates")]
+        [ProducesResponseType(typeof(DetailsProp), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<DetailsProp> GetPropDetailsBetweenDates(DateTime DateFrom, DateTime DateTo)
+        {
+            return productService.GetPropDetailsBetweenDates(DateFrom, DateTo);
+        }
+
+        [HttpGet]
+        [Route("GetPropDetailsDaily")]
+        [ProducesResponseType(typeof(DetailsProp), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<DetailsProp> GetPropDetailsDaily()
+        {
+            return productService.GetPropDetailsDaily();
+        }
+
+        [HttpGet]
+        [Route("GetPropDetailsMonthly")]
+        [ProducesResponseType(typeof(DetailsProp), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<DetailsProp> GetPropDetailsMonthly()
+        {
+            return productService.GetPropDetailsMonthly();
+        }
+
+        [HttpGet]
+        [Route("GetPropDetailsYearly")]
+        [ProducesResponseType(typeof(DetailsProp), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<DetailsProp> GetPropDetailsYearly()
+        {
+            return productService.GetPropDetailsYearly();
+        }
+
+
     }
 }

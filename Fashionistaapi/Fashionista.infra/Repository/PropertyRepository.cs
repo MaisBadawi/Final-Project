@@ -136,5 +136,38 @@ namespace Fashionista.infra.Repository
 
             return result.ToList();
         }
+
+        public List<DetailsProp> GetPropDetails()
+        {
+            var result = context.connection.Query<DetailsProp>("Proparety_Package.GetPropDetails", commandType: CommandType.StoredProcedure);
+            return result.ToList();
+        }
+
+        public List<DetailsProp> GetPropDetailsBetweenDates(DateTime DateFrom, DateTime DateTo)
+        {
+            var p = new DynamicParameters();
+            p.Add("DateFrom", DateFrom, dbType: DbType.Date, direction: ParameterDirection.Input);
+            p.Add("DateTo", DateTo, dbType: DbType.Date, direction: ParameterDirection.Input);
+            var result = context.connection.Query<DetailsProp>("Proparety_Package.GetPropDetailsBetweenDates", p, commandType: CommandType.StoredProcedure);
+            return result.ToList();
+        }
+
+        public List<DetailsProp> GetPropDetailsDaily()
+        {
+            var result = context.connection.Query<DetailsProp>("Proparety_Package.GetPropDetailsDaily", commandType: CommandType.StoredProcedure);
+            return result.ToList();
+        }
+
+        public List<DetailsProp> GetPropDetailsMonthly()
+        {
+            var result = context.connection.Query<DetailsProp>("Proparety_Package.GetPropDetailsMonthly", commandType: CommandType.StoredProcedure);
+            return result.ToList();
+        }
+
+        public List<DetailsProp> GetPropDetailsYearly()
+        {
+            var result = context.connection.Query<DetailsProp>("Proparety_Package.GetPropDetailsYearly", commandType: CommandType.StoredProcedure);
+            return result.ToList();
+        }
     }
 }

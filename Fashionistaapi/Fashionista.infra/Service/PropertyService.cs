@@ -72,5 +72,32 @@ namespace Fashionista.infra.Service
         {
             return propertyService.GetSoldoutProperty();
         }
+
+
+        public List<DetailsProp> GetPropDetails()
+        {
+            return propertyService.GetPropDetails();
+        }
+
+        public List<DetailsProp> GetPropDetailsBetweenDates(DateTime DateFrom, DateTime DateTo)
+        {
+            return propertyService.GetPropDetailsBetweenDates(DateFrom, DateTo);
+        }
+
+        public List<DetailsProp> GetPropDetailsDaily()
+        {
+            return propertyService.GetPropDetailsDaily();
+        }
+
+        public List<DetailsProp> GetPropDetailsMonthly()
+        {
+            return propertyService.GetPropDetailsMonthly();
+        }
+
+        public List<DetailsProp> GetPropDetailsYearly()
+        {
+            return propertyService.GetPropDetailsYearly();
+        }
+
     }
 }

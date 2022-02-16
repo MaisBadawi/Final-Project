@@ -19,5 +19,11 @@ namespace Fashionista.core.Service
         public List<GetPropertyDto> GetByName(string name);
         public List<NewestProductDto> GetNewestProperty();
         public List<GetPropertyDto> GetSoldoutProperty();
+
+        public List<DetailsProp> GetPropDetails();
+        public List<DetailsProp> GetPropDetailsDaily();
+        public List<DetailsProp> GetPropDetailsMonthly();
+        public List<DetailsProp> GetPropDetailsYearly();
+        public List<DetailsProp> GetPropDetailsBetweenDates(DateTime DateFrom, DateTime DateTo);
     }
 }
