@@ -22,6 +22,8 @@ namespace Fashionista.core.DTO
 
         public decimal Gender { get; set; }
         public string USERNAME { get; set; }
+        public string PASSWORD { get; set; }
+
 
 
     }

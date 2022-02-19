@@ -270,3 +270,11 @@ C:\Users\iMSI\Desktop\Last APi\Final-Project\Fashionistaapi\Fashionista.api\obj\
 C:\Users\iMSI\Desktop\Last APi\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.RazorTargetAssemblyInfo.cache
 C:\Users\iMSI\Desktop\Last APi\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.genruntimeconfig.cache
 C:\Users\iMSI\Desktop\Last APi\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.csproj.CopyComplete
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.csproj.AssemblyReference.cache
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.AssemblyInfoInputs.cache
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.AssemblyInfo.cs
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.csproj.CoreCompileInputs.cache
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.dll
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.api\obj\Debug\netcoreapp3.1\Fashionista.api.pdb

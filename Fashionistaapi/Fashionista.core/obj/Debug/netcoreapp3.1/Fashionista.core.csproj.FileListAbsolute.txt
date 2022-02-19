@@ -37,3 +37,13 @@ C:\Users\iMSI\Desktop\Last APi\Final-Project\Fashionistaapi\Fashionista.core\obj
 C:\Users\iMSI\Desktop\Last APi\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.dll
 C:\Users\iMSI\Desktop\Last APi\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.pdb
 C:\Users\iMSI\Desktop\Last APi\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.csproj.AssemblyReference.cache
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.core\bin\Debug\netcoreapp3.1\Fashionista.core.deps.json
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.core\bin\Debug\netcoreapp3.1\Fashionista.core.dll
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.core\bin\Debug\netcoreapp3.1\Fashionista.core.pdb
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.csproj.AssemblyReference.cache
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.AssemblyInfoInputs.cache
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.AssemblyInfo.cs
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.csproj.CoreCompileInputs.cache
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.dll
+C:\Users\iMSI\Desktop\New folder (5)\Final-Project\Fashionistaapi\Fashionista.core\obj\Debug\netcoreapp3.1\Fashionista.core.pdb

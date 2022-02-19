@@ -24,5 +24,6 @@ namespace Fashionista.core.Service
         public bool Changepass(Auth auth);
 
         public User GetCustomerById(int id);
+        public bool UpdateEmployeeProfile(Employee employee);
     }
 }

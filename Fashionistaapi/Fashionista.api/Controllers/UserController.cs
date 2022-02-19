@@ -167,6 +167,17 @@ namespace Fashionista.api.Controllers
 
 
 
+        [HttpPut]
+        [Route("UpdateEmployeeProfile")]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public bool UpdateEmployeeProfile(Employee employee)
+        {
+            return userService.UpdateEmployeeProfile(employee);
+        }
+
+
+
 
         [HttpPut]
         [Route("uploadImage")]

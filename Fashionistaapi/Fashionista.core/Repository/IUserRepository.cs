@@ -25,7 +25,7 @@ namespace Fashionista.core.Repository
         public User Auth(User user);
 
         public User GetCustomerById(int id);
-
+        public bool UpdateEmployeeProfile(Employee employee);
 
     }
 }

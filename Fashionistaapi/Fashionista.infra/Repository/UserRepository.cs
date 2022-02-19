@@ -225,5 +225,33 @@ namespace Fashionista.infra.Repository
             var result = context.connection.Query<Employee>("USERS_PACKAGE.GetEmployeeById", p, commandType: CommandType.StoredProcedure);
             return result.FirstOrDefault();
         }
+
+
+        public bool UpdateEmployeeProfile(Employee employee)
+        {
+            var ob = new DynamicParameters();
+
+            ob.Add("IDOFUSER", employee.Id, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+            ob.Add("FNAMEOFUSER", employee.FName, dbType: DbType.String, direction: ParameterDirection.Input);
+            ob.Add("LNAMEOFUSER", employee.LName, dbType: DbType.String, direction: ParameterDirection.Input);
+
+            ob.Add("EMAILOFUSER", employee.Email, dbType: DbType.String, direction: ParameterDirection.Input);
+            ob.Add("PHONEOFUSER", employee.Phone, dbType: DbType.String, direction: ParameterDirection.Input);
+            ob.Add("ADDRESSOFUSER", employee.Address, dbType: DbType.String, direction: ParameterDirection.Input);
+
+            ob.Add("IMAGE_PATHOFUSER", employee.EmpImage, dbType: DbType.String, direction: ParameterDirection.Input);
+            ob.Add("GENDEROFUSER", employee.Gender, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+
+            ob.Add("U_Password", employee.PASSWORD, dbType: DbType.String, direction: ParameterDirection.Input);
+            ob.Add("U_username", employee.USERNAME, dbType: DbType.String, direction: ParameterDirection.Input);
+
+
+
+
+
+            context.connection.Execute("USERS_PACKAGE.UpdateEmployeeProfile", ob, commandType: CommandType.StoredProcedure);
+
+            return true;
+        }
     }
 }

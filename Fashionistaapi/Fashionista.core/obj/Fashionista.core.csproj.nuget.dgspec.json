@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rama khazaaleh\\Desktop\\newproject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {}
+    "C:\\Users\\iMSI\\Desktop\\New folder (5)\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rama khazaaleh\\Desktop\\newproject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
+    "C:\\Users\\iMSI\\Desktop\\New folder (5)\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rama khazaaleh\\Desktop\\newproject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
+        "projectUniqueName": "C:\\Users\\iMSI\\Desktop\\New folder (5)\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
         "projectName": "Fashionista.core",
-        "projectPath": "C:\\Users\\rama khazaaleh\\Desktop\\newproject\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
-        "packagesPath": "C:\\Users\\rama khazaaleh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rama khazaaleh\\Desktop\\newproject\\Final-Project\\Fashionistaapi\\Fashionista.core\\obj\\",
+        "projectPath": "C:\\Users\\iMSI\\Desktop\\New folder (5)\\Final-Project\\Fashionistaapi\\Fashionista.core\\Fashionista.core.csproj",
+        "packagesPath": "C:\\Users\\iMSI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\iMSI\\Desktop\\New folder (5)\\Final-Project\\Fashionistaapi\\Fashionista.core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rama khazaaleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\iMSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
