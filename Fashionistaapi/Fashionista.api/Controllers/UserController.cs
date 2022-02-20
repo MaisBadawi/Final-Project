@@ -181,7 +181,42 @@ namespace Fashionista.api.Controllers
 
         [HttpPut]
         [Route("uploadImage")]
-        public User UploadImage()
+        public Employee UploadImage()
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                byte[] fileImageContent;
+                using (var memory = new MemoryStream())
+                {
+                    file.CopyTo(memory);
+                    fileImageContent = memory.ToArray();
+                }
+                var fileName = Path.GetFileNameWithoutExtension(file.FileName);
+                string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
+
+                string path = Path.Combine("C:\\Users\\iMSI\\Desktop\\Last Angular\\Final-project\\FinalTask\\Task\\src\\assets\\Images", imageFileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+
+                return new Employee()
+                {
+                    EmpImage = imageFileName
+                };
+            }
+            catch (FileLoadException)
+            {
+                return null;
+            }
+        }
+
+
+
+        [HttpPost]
+        [Route("UpImage")]
+        public User UploadImageSignUp()
         {
             try
             {
@@ -212,6 +247,39 @@ namespace Fashionista.api.Controllers
             }
         }
 
+
+        [HttpPut]
+        [Route("EditImage")]
+        public User EditImage()
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                byte[] fileImageContent;
+                using (var memory = new MemoryStream())
+                {
+                    file.CopyTo(memory);
+                    fileImageContent = memory.ToArray();
+                }
+                var fileName = Path.GetFileNameWithoutExtension(file.FileName);
+                string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
+
+                string path = Path.Combine("C:\\Users\\iMSI\\Desktop\\Last Angular\\Final-project\\FinalTask\\Task\\src\\assets\\Images", imageFileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+
+                return new User()
+                {
+                    Image_Path = imageFileName
+                };
+            }
+            catch (FileLoadException)
+            {
+                return null;
+            }
+        }
 
 
 

@@ -40,9 +40,14 @@ namespace Fashionista.infra.Service
             return reviewRepository.Insert_Review(review);
         }
 
-        public TopRatingDto Top_Rating()
+        public List<TopRatingDto> Top_Rating()
         {
             return reviewRepository.Top_Rating();
+        }
+
+        public List<TopRatingDto> All_Rating()
+        {
+            return reviewRepository.All_Rating();
         }
 
         public bool Update_Review(Reviews review)

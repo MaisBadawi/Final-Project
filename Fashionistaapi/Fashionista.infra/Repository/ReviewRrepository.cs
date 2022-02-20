@@ -65,10 +65,10 @@ namespace Fashionista.infra.Repository
             return "true";
         }
 
-        public TopRatingDto Top_Rating()
+        public List<TopRatingDto> Top_Rating()
         {
             var result = context.connection.Query<TopRatingDto>("Reviews_Package.Top_Rating",  commandType: CommandType.StoredProcedure);
-            return result.FirstOrDefault();
+            return result.ToList();
         }
 
         public bool Update_Review(Reviews review)
@@ -84,6 +84,13 @@ namespace Fashionista.infra.Repository
 
             var result = context.connection.ExecuteAsync("Reviews_Package.Update_Review", p, commandType: CommandType.StoredProcedure);
             return true;
+        }
+
+        public List<TopRatingDto> All_Rating()
+        {
+            IEnumerable<TopRatingDto> result = context.connection.Query<TopRatingDto>("Reviews_Package.All_Rating", commandType: CommandType.StoredProcedure);
+
+            return result.ToList();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Fashionista.core.Service
 
 
         public AllReviewDto Get_Review_By_IdProduct(int id);
-        public TopRatingDto Top_Rating();
+        public List<TopRatingDto> Top_Rating();
+        public List<TopRatingDto> All_Rating();
     }
 }

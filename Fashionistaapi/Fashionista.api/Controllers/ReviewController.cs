@@ -72,11 +72,20 @@ namespace Fashionista.api.Controllers
 
         [HttpGet]
         [Route("TopRating")]
-        [ProducesResponseType(typeof(TopRatingDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<TopRatingDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public TopRatingDto Top_Rating()
+        public List<TopRatingDto> Top_Rating()
         {
             return service.Top_Rating();
+        }
+
+        [HttpGet]
+        [Route("AllRating")]
+        [ProducesResponseType(typeof(TopRatingDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public List<TopRatingDto> All_Rating()
+        {
+            return service.All_Rating();
         }
 
 

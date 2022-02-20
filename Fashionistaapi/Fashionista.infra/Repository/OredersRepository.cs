@@ -122,7 +122,7 @@ namespace Fashionista.infra.Repository
 
 
             var ob = new DynamicParameters();
-            ob.Add("O_Today", numOfDay, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            ob.Add("O_Today", numOfDay, dbType: DbType.DateTime, direction: ParameterDirection.Input);
 
             IEnumerable<OrderAdmin> result = context.connection.Query<OrderAdmin>("Orders_Pakage.Get_Daily_Orders", ob, commandType: CommandType.StoredProcedure);
             return result.ToList();
