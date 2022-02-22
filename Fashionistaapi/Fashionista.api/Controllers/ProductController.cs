@@ -66,7 +66,7 @@ namespace Fashionista.api.Controllers
        
         
         [HttpPost]
-        [Route("AllProductForCust")]
+        [Route("AllProductForCust")] 
         [ProducesResponseType(typeof(List<GetProductByInfo>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public List<GetProductByInfo> GetProduct_Category([FromBody] PersonInfoDto product)

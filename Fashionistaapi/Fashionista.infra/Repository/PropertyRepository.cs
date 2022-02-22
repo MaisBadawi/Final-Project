@@ -54,14 +54,14 @@ namespace Fashionista.infra.Repository
             return result.FirstOrDefault();
         }
 
-        public List<GetPropertyDto> GetProperty_IDProduct(Property proparty)
+        public List<GetPropertyDto> GetProperty_IDProduct(PersonInfoDto proparty)//////
         {
             var p = new DynamicParameters();
-            p.Add("@P_PrpductId", proparty.ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("@Skin_Color", proparty.SKIN_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("@P_SizeGeneral", proparty.SIZE_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("@P_AgePeriod", proparty.AGE_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
-
+            p.Add("@P_PrpductId", proparty.ProductId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("@Skin_Color", proparty.SkinId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("@P_AgePeriod", proparty.AgeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("height", proparty.Height, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("weight", proparty.Weight, dbType: DbType.Int32, direction: ParameterDirection.Input);
             var result = context.connection.Query<GetPropertyDto>("Proparety_Package.GetProperty_IDProduct", p, commandType: CommandType.StoredProcedure);
             return result.ToList();
         }

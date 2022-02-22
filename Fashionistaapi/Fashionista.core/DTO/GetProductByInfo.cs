@@ -6,6 +6,7 @@ namespace Fashionista.core.DTO
 {
   public  class GetProductByInfo
     {
+        public decimal Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }

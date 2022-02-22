@@ -31,7 +31,7 @@ namespace Fashionista.infra.Service
             return propertyService.GetProperty_ID(id);
         }
 
-        public List<GetPropertyDto> GetProperty_IDProduct(Property proparty)
+        public List<GetPropertyDto> GetProperty_IDProduct(PersonInfoDto proparty)
         {
             return propertyService.GetProperty_IDProduct(proparty);
         }

@@ -32,7 +32,7 @@ namespace Fashionista.api.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(List<GetPropertyDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public List<GetPropertyDto> GetProperty_IDProduct(Property proparty)
+        public List<GetPropertyDto> GetProperty_IDProduct(PersonInfoDto proparty)
         { return productService.GetProperty_IDProduct(proparty); }
 
         [HttpPost]

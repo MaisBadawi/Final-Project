@@ -88,7 +88,8 @@ namespace Fashionista.infra.Repository
             var p = new DynamicParameters();
 
             p.Add("Skin_Color", product.SkinId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_SizeGeneral", product.SizeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("height", product.Height, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("weight", product.Weight, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_AgePeriod", product.AgeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_CategoryId", product.CategoryId, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
@@ -101,7 +102,8 @@ namespace Fashionista.infra.Repository
             var p = new DynamicParameters();
 
             p.Add("Skin_Color", product.SkinId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_SizeGeneral", product.SizeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("height", product.Height, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("weight", product.Weight, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_AgePeriod", product.AgeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_CategoryId", product.CategoryId, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
@@ -114,7 +116,8 @@ namespace Fashionista.infra.Repository
             var p = new DynamicParameters();
 
             p.Add("Skin_Color", product.SkinId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_SizeGeneral", product.SizeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("height", product.Height, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("weight", product.Weight, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_AgePeriod", product.AgeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_CategoryId", product.CategoryId, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
@@ -127,7 +130,8 @@ namespace Fashionista.infra.Repository
             var p = new DynamicParameters();
 
             p.Add("Skin_Color", product.SkinId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_SizeGeneral", product.SizeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("height", product.Height, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("weight", product.Weight, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_AgePeriod", product.AgeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_CategoryId", product.CategoryId, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
@@ -140,7 +144,8 @@ namespace Fashionista.infra.Repository
             var p = new DynamicParameters();
 
             p.Add("Skin_Color", product.SkinId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            p.Add("P_SizeGeneral", product.SizeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("height", product.Height, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("weight", product.Weight, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_AgePeriod", product.AgeId, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("P_CategoryId", product.CategoryId, dbType: DbType.Int32, direction: ParameterDirection.Input);
 

@@ -59,17 +59,17 @@ namespace Fashionista.infra.Repository
         public bool Insert_UserOrder(UserOrder userOrder)
         {
             var p = new DynamicParameters();
-            p.Add("Id_Of_pro",userOrder.ProId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("Id_Of_pro",userOrder.ProId, dbType: DbType.Int32, direction: ParameterDirection.Input);//
 
             IEnumerable<Product> result = context.connection.Query<Product>("Buying_package.GetPrice_PropID", p, commandType: CommandType.StoredProcedure);
-            Product item = result.SingleOrDefault();
+            Product item = result.FirstOrDefault();
 
             var ob = new DynamicParameters();
             ob.Add("Id_Of_Order", null, dbType: DbType.Int32, direction: ParameterDirection.Input);
             ob.Add("Id_Of_Cust", userOrder.CustId, dbType: DbType.Decimal, direction: ParameterDirection.Input);
-            ob.Add("Id_Of_pro", userOrder.ProId, DbType.Decimal, direction: ParameterDirection.Input);
+            ob.Add("Id_Of_pro", userOrder.ProId, DbType.Int32, direction: ParameterDirection.Input);
             ob.Add("Qunt", userOrder.Quantity, dbType: DbType.Decimal, direction: ParameterDirection.Input);
-            ob.Add("O_Price", userOrder.Quantity *4, dbType: DbType.Double, direction: ParameterDirection.Input) ;
+            ob.Add("O_Price", userOrder.Quantity * item.Price, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             context.connection.Execute("Buying_package.Insert_User_Order", ob, commandType: CommandType.StoredProcedure);
             return true;
         }
