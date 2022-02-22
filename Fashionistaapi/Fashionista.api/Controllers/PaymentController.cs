@@ -63,7 +63,7 @@ namespace Fashionista.api.Controllers
 
       
 
-        [HttpPut]
+        [HttpGet]
         [Route("DiscountOrder/{userId}/{orderPrice}")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
