@@ -15,7 +15,7 @@ namespace Fashionista.infra.Service
             MimeMessage message = new MimeMessage();
 
             MailboxAddress from = new MailboxAddress("Fashionista.com",
-            "maisbadawi98@gmail.com");
+            "Khr25984@gmail.com");
             message.From.Add(from);
 
             MailboxAddress to = new MailboxAddress("User",
@@ -25,7 +25,7 @@ namespace Fashionista.infra.Service
             message.Subject = mailRequest.Subject;
 
             BodyBuilder bodyBuilder = new BodyBuilder();
-            bodyBuilder.HtmlBody = mailRequest.Body;
+            bodyBuilder.HtmlBody = "<h1>Greetings from Fashionista.com</h1><p>" + mailRequest.Body + "</P>"; 
             message.Body = bodyBuilder.ToMessageBody();
 
             using (var client = new SmtpClient())
@@ -34,7 +34,7 @@ namespace Fashionista.infra.Service
                 client.CheckCertificateRevocation = false;
 
                 client.Connect("smtp.gmail.com", 587, false);
-                client.Authenticate("maisbadawi98@gmail.com", "9982028081");
+                client.Authenticate("Khr25984@gmail.com", "RAMAM97@97");
 
                 client.Send(message);
                 client.Disconnect(true);
