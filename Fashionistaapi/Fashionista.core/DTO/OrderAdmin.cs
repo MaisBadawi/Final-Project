@@ -14,6 +14,7 @@ namespace Fashionista.core.DTO
         public DateTime Date { get; set; }
         public string DeliveryName { get; set; }
         public Decimal Status { get; set; }
-
+        public string Lx { get; set; }
+        public string Ly { get; set; }
     }
 }

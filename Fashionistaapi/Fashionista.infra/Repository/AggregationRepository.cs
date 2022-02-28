@@ -46,7 +46,7 @@ namespace Fashionista.infra.Repository
     public Aggregetion NumOrderDev(Order Id_dev)
     {
       var p = new DynamicParameters();
-      p.Add("Id_dev", Id_dev.DeliveryId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+      p.Add("Id_dev", Id_dev.Delivery_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
       var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumOrderDev", p, commandType: CommandType.StoredProcedure);
       return result.FirstOrDefault();
@@ -188,7 +188,23 @@ namespace Fashionista.infra.Repository
             return result.FirstOrDefault();
         }
 
-       
+        public Aggregetion NumOrdersYearlyComp()
+        {
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumOrdersYearlyComp", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion NumOrdersMonthlyComp()
+        {
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumOrdersMonthlyComp", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
+
+        public Aggregetion NumOrdersDailyComp()
+        {
+            var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumOrdersDailyComp", commandType: CommandType.StoredProcedure);
+            return result.FirstOrDefault();
+        }
 
 
 

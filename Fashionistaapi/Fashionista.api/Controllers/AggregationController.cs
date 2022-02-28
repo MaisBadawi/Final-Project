@@ -225,5 +225,35 @@ namespace Fashionista.api.Controllers
         {
             return aggregationService.SumSalAfterDed();
         }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumOrdersYearlyComp")]
+        public Aggregetion NumOrdersYearlyComp()
+        {
+            return aggregationService.NumOrdersYearlyComp();
+        }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumOrdersMonthlyComp")]
+        public Aggregetion NumOrdersMonthlyComp()
+        {
+            return aggregationService.NumOrdersMonthlyComp();
+        }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumOrdersDailyComp")]
+        public Aggregetion NumOrdersDailyComp()
+        {
+            return aggregationService.NumOrdersDailyComp();
+        }
     }
 }

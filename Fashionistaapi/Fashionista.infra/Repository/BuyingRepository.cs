@@ -39,7 +39,7 @@ namespace Fashionista.infra.Repository
             foreach (var i in result)
             {
                 var p = new DynamicParameters();
-                p.Add("Id_Of_pro", i.ProId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+                p.Add("Id_Of_pro", i.Pro_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
                 p.Add("Qunt", i.Quantity, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
                 context.connection.Execute("Buying_package.Update_Qun_AfterBuying", p, commandType: CommandType.StoredProcedure);
@@ -59,7 +59,7 @@ namespace Fashionista.infra.Repository
         public bool Insert_UserOrder(UserOrder userOrder)
         {
             var p = new DynamicParameters();
-            p.Add("Id_Of_pro",userOrder.ProId, dbType: DbType.Int32, direction: ParameterDirection.Input);//
+            p.Add("Id_Of_pro",userOrder.Pro_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);//
 
             IEnumerable<Product> result = context.connection.Query<Product>("Buying_package.GetPrice_PropID", p, commandType: CommandType.StoredProcedure);
             Product item = result.FirstOrDefault();
@@ -67,7 +67,7 @@ namespace Fashionista.infra.Repository
             var ob = new DynamicParameters();
             ob.Add("Id_Of_Order", null, dbType: DbType.Int32, direction: ParameterDirection.Input);
             ob.Add("Id_Of_Cust", userOrder.CustId, dbType: DbType.Decimal, direction: ParameterDirection.Input);
-            ob.Add("Id_Of_pro", userOrder.ProId, DbType.Int32, direction: ParameterDirection.Input);
+            ob.Add("Id_Of_pro", userOrder.Pro_Id, DbType.Int32, direction: ParameterDirection.Input);
             ob.Add("Qunt", userOrder.Quantity, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             ob.Add("O_Price", userOrder.Quantity * item.Price, dbType: DbType.Decimal, direction: ParameterDirection.Input);
             context.connection.Execute("Buying_package.Insert_User_Order", ob, commandType: CommandType.StoredProcedure);
@@ -77,7 +77,7 @@ namespace Fashionista.infra.Repository
         public bool UpdateQuant_ID(UserOrder userOrder)
         {
             var p = new DynamicParameters();
-            p.Add("Id_Of_pro", userOrder.ProId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("Id_Of_pro", userOrder.Pro_Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
             IEnumerable<Product> result = context.connection.Query<Product>("Buying_package.GetPrice_PropID", p, commandType: CommandType.StoredProcedure);
             Product item = result.SingleOrDefault();
@@ -90,13 +90,11 @@ namespace Fashionista.infra.Repository
             return true;
         }
 
-        public bool Update_OrderID(UserOrder userOrder)
+        public bool Update_OrderID(int CustId, int OrderId)
         {
-
-           
             var ob = new DynamicParameters();
-            ob.Add("Id_Of_Cust", userOrder.CustId, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            ob.Add("Id_Order", userOrder.OrderId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            ob.Add("Id_Of_Cust", CustId, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            ob.Add("Id_Order", OrderId, dbType: DbType.Int32, direction: ParameterDirection.Input);
             context.connection.Execute("Buying_package.Update_OrderID", ob, commandType: CommandType.StoredProcedure);
             return true;
         }

@@ -65,13 +65,13 @@ namespace Fashionista.api.Controllers
 
 
 
-        [HttpPut]
-        [Route("ConfirmationOrder")]
+        [HttpGet]
+        [Route("ConfirmationOrder/{CustId}/{OrderId}")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public bool Update_OrderID([FromBody]UserOrder userOrder)
+        public bool Update_OrderID(int CustId, int OrderId)
         {
-            return buyingServices.Update_OrderID(userOrder);
+            return buyingServices.Update_OrderID(CustId, OrderId);
         }
 
         [HttpGet]

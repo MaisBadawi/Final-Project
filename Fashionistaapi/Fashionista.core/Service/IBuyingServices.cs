@@ -12,7 +12,7 @@ namespace Fashionista.core.Service
         public List<DetailsOrder> GetProp_CustID(int ID);//when user open cart 
         public bool UpdateQuant_ID(UserOrder userOrder);//update quant of prop before payment
         public bool DeleteUO_ID(int Id);//delet prop from cart before payment
-        public bool Update_OrderID(UserOrder userOrder);
+        public bool Update_OrderID(int CustId, int OrderId);
         public bool Discount_QuantityProp(int Id_Of_Cust);
 
 

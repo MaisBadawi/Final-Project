@@ -43,5 +43,16 @@ namespace Fashionista.infra.Service
         {
             return deliveryrepository.Update_Delivary(delivery);
         }
+
+        public bool Update_LxLy(string lx, string ly)
+        {
+            return deliveryrepository.Update_LxLy(lx, ly);
+        }
+
+        public Delivery Get_LxLy()
+        {
+            return deliveryrepository.Get_LxLy();
+
+        }
     }
 }

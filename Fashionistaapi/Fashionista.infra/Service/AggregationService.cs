@@ -121,5 +121,20 @@ namespace Fashionista.infra.Service
             return aggregationRepository.NumProductsSoldYearly();
         }
 
+
+        public Aggregetion NumOrdersYearlyComp()
+        {
+            return aggregationRepository.NumOrdersYearlyComp();
+        }
+
+        public Aggregetion NumOrdersMonthlyComp()
+        {
+            return aggregationRepository.NumOrdersMonthlyComp();
+        }
+
+        public Aggregetion NumOrdersDailyComp()
+        {
+            return aggregationRepository.NumOrdersDailyComp();
+        }
     }
 }

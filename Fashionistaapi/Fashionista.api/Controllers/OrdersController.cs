@@ -110,13 +110,13 @@ namespace Fashionista.api.Controllers
 
 
 
-        [HttpPost]
-        [Route("AddOrder")]
+        [HttpGet]
+        [Route("AddOrder/{lx}/{ly}")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public bool Insert_Order([FromBody] Order order)
+        public Order Insert_Order(string lx, string ly)
         {
-            return orderService.Insert_Order(order);
+            return orderService.Insert_Order(lx, ly);
         }
 
 

@@ -48,8 +48,8 @@ namespace Fashionista.infra.Repository
 
             p.Add("M_Cust_Id", msg.CUSTOMER_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("Msg", msg.MESSG, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("Reciv", msg.RECIVER, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("M_Cust_Id", msg.CUSTOMER_ID, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            p.Add("Reciv", "Accountant", dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("M_Status", 0, dbType: DbType.Int32, direction: ParameterDirection.Input);
             var result = context.connection.ExecuteAsync("Massege_Package.Insert_Msg", p, commandType: CommandType.StoredProcedure);
             return "valid";
         }

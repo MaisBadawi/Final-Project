@@ -63,6 +63,29 @@ namespace Fashionista.api.Controllers
         {
             return service.Delete_Delivary_By_Id(id);
         }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(List<Delivery>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("Update_LxLy/{lx}/{ly}")]
+        public bool Update_LxLy(string lx, string ly)
+        {
+            return service.Update_LxLy(lx, ly);
+        }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(Delivery), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("GetLxLy")]
+        public Delivery Get_LxLy()
+        {
+            return service.Get_LxLy();
+
+        }
+
+
     }
 
 }

@@ -6,6 +6,8 @@ namespace Fashionista.core.DTO
 {
     public class DetailsOrder
     {
+        public int ID { get; set; }
+        public int IdPro { get; set; }
         public string Name { get; set; }
         public string ProductImage { get; set; }
         public string GeneralSize { get; set; }

@@ -14,5 +14,10 @@ namespace Fashionista.core.Service
         public Delivery Get_Delivary_By_Id(int id);
 
         public List<Delivery> Get_Delivary_Available(int StatusDelivary);
+
+        public bool Update_LxLy(string lx, string ly);
+
+        public Delivery Get_LxLy();
+
     }
 }

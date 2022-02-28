@@ -8,7 +8,7 @@ namespace Fashionista.core.Repository
 {
     public interface IOrdersRepository
     {
-        public bool Insert_Order(Order order);
+        public Order Insert_Order(string lx, string ly);
         public bool Delete_Order(int Id_Order );
         public bool Update_Order(Order order);
         public List<OrderAdmin> Get_All_CompletedOrders();

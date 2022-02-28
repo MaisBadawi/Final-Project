@@ -35,5 +35,10 @@ namespace Fashionista.core.Service
 
         public Aggregetion NumSMSNew();
         public Aggregetion SumSalAfterDed();
+
+        public Aggregetion NumOrdersYearlyComp();
+
+        public Aggregetion NumOrdersMonthlyComp();
+        public Aggregetion NumOrdersDailyComp();
     }
 }

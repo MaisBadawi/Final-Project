@@ -69,5 +69,22 @@ namespace Fashionista.infra.Repository
             var result = context.connection.ExecuteAsync("Delivary_Package.Update_Delivary", p, commandType: CommandType.StoredProcedure);
             return true;
         }
+
+        public bool Update_LxLy(string lx, string ly)
+        {
+            var p = new DynamicParameters();
+            p.Add("lx", lx, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("ly", ly, dbType: DbType.String, direction: ParameterDirection.Input);
+            var result = context.connection.ExecuteAsync("Delivary_Package.Update_LxLy", p, commandType: CommandType.StoredProcedure);
+            return true;
+        }
+
+        public Delivery Get_LxLy()
+        {
+            var result = context.connection.Query<Delivery>("Delivary_Package.Get_LxLy", commandType: CommandType.StoredProcedure);
+            return result.SingleOrDefault();
+
+        }
+
     }
 }

@@ -55,9 +55,9 @@ namespace Fashionista.infra.Service
             return ordersRepository.Get_NotCompletedOrders_User(CUST_ID);
         }
 
-        public bool Insert_Order(Order order)
+        public Order Insert_Order(string lx, string ly)
         {
-            return ordersRepository.Insert_Order(order);
+            return ordersRepository.Insert_Order(lx, ly);
         }
 
         public bool Update_Order(Order order)

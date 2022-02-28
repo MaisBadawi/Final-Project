@@ -15,7 +15,7 @@ namespace Fashionista.core.Repository
         public List<DetailsOrder> GetProp_CustID(int ID);//Get Items from cart 
         public bool UpdateQuant_ID(UserOrder userOrder);//update quant of prop before payment
         public bool DeleteUO_ID(int Id);//delet item from cart before payment
-        public bool Update_OrderID(UserOrder userOrder);//// store details of order (prop ,qunt,price) in order table after dicount from visa and get orderID 
+        public bool Update_OrderID(int CustId, int OrderId);//// store details of order (prop ,qunt,price) in order table after dicount from visa and get orderID 
 
         public bool Discount_QuantityProp(int Id_Of_Cust );
 

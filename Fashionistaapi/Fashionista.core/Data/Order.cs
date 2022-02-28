@@ -15,7 +15,7 @@ namespace Fashionista.core.Data
         public decimal Id { get; set; }
         public DateTime Dateoforder { get; set; }
         public decimal? Status { get; set; }
-        public decimal? DeliveryId { get; set; }
+        public decimal? Delivery_Id { get; set; }
         public string LX { get; set; }
 
         public string LY { get; set; }

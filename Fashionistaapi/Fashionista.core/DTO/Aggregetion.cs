@@ -33,5 +33,13 @@ namespace Fashionista.core.DTO
         public int SumSalAfterDed { get; set; }
         public int NumSMSNew { get; set; }
 
+        public int OrderDailycomp { get; set; }
+
+        public int OrderMonthlycomp { get; set; }
+
+        public int OrderYearlycomp { get; set; }
+
+
+
     }
 }

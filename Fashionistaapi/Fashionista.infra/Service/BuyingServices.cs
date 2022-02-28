@@ -43,9 +43,9 @@ namespace Fashionista.infra.Service
             return buyingRepository.UpdateQuant_ID(userOrder);
         }
 
-        public bool Update_OrderID(UserOrder userOrder)
+        public bool Update_OrderID(int CustId, int OrderId)
         {
-            return buyingRepository.Update_OrderID(userOrder);
+            return buyingRepository.Update_OrderID(CustId, OrderId);
         }
     }
 }
