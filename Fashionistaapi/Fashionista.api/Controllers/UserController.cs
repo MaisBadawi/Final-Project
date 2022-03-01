@@ -180,7 +180,7 @@ namespace Fashionista.api.Controllers
 
 
         [HttpPut]
-        [Route("uploadImage")]
+        [Route("updateimage")] //Update Emplo ?
         public Employee UploadImage()
         {
             try
@@ -214,7 +214,7 @@ namespace Fashionista.api.Controllers
 
 
 
-        [HttpPost]
+     /*   [HttpPost] // User
         [Route("UpImage")]
         public User UploadImageSignUp()
         {
@@ -245,10 +245,10 @@ namespace Fashionista.api.Controllers
             {
                 return null;
             }
-        }
+        }*/
 
 
-        [HttpPut]
+        [HttpPut]//update user  ?????  should be edit
         [Route("EditImage")]
         public User EditImage()
         {
@@ -282,6 +282,108 @@ namespace Fashionista.api.Controllers
         }
 
 
+        [HttpPost] // Emp post
+        [Route("uploadimage")]
+        public Employee UploadImageEmp()
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                byte[] fileImageContent;
+                using (var memory = new MemoryStream())
+                {
+                    file.CopyTo(memory);
+                    fileImageContent = memory.ToArray();
+                }
+                var fileName = Path.GetFileNameWithoutExtension(file.FileName);
+                string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
+
+                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+
+                return new Employee()
+                {
+                    EmpImage = imageFileName
+                };
+            }
+            catch (FileLoadException)
+            {
+                return null;
+            }
+        }
+
+
+
+        [HttpPost] //Create Account
+        [Route("uploadimageCustomer")]
+        public Customer UploadImageCustom()
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                byte[] fileImageContent;
+                using (var memory = new MemoryStream())
+                {
+                    file.CopyTo(memory);
+                    fileImageContent = memory.ToArray();
+                }
+                var fileName = Path.GetFileNameWithoutExtension(file.FileName);
+                string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
+
+                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+
+                return new Customer()
+                {
+                    CustomerImage = imageFileName
+                };
+            }
+            catch (FileLoadException)
+            {
+                return null;
+            }
+        }
+
+
+
+        [HttpPut]
+        [Route("updateimageCustomer")]
+        public Customer UpdateImageCustom()
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                byte[] fileImageContent;
+                using (var memory = new MemoryStream())
+                {
+                    file.CopyTo(memory);
+                    fileImageContent = memory.ToArray();
+                }
+                var fileName = Path.GetFileNameWithoutExtension(file.FileName);
+                string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
+
+                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+
+                return new Customer()
+                {
+                    CustomerImage = imageFileName
+                };
+            }
+            catch (FileLoadException)
+            {
+                return null;
+            }
+        }
 
     }
 }

@@ -108,14 +108,13 @@ namespace Fashionista.infra.Repository
             return item;
         }
 
-        public bool Update_Order(Order order)
+        public bool Update_Order(int Id_Order, int O_Status)
         {
             var ob = new DynamicParameters();
-            ob.Add("O_Status", order.Status, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            ob.Add("Id_Order", order.Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            ob.Add("LX_U", order.LX, dbType: DbType.String, direction: ParameterDirection.Input);
+            ob.Add("O_Status", O_Status, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            ob.Add("Id_Order", Id_Order, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
-            ob.Add("LX_Y", order.LY, dbType: DbType.String, direction: ParameterDirection.Input);
+
             context.connection.Execute("Orders_Pakage.Update_Order", ob, commandType: CommandType.StoredProcedure);
             return true;
         }

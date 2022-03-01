@@ -60,13 +60,13 @@ namespace Fashionista.infra.Service
             return ordersRepository.Insert_Order(lx, ly);
         }
 
-        public bool Update_Order(Order order)
+        public bool Update_Order(int Id_Order, int O_Status)
         {
-            return ordersRepository.Update_Order(order);
+            return ordersRepository.Update_Order(Id_Order, O_Status);
         }
 
 
-      public  List<OrderAdmin> Get_All_Orders()
+        public  List<OrderAdmin> Get_All_Orders()
         {
             return ordersRepository.Get_All_Orders();
         }

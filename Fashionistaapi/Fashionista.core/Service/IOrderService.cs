@@ -10,7 +10,7 @@ namespace Fashionista.core.Service
     {
         public Order Insert_Order(string lx, string ly);
         public bool Delete_Order(int Id_Order);
-        public bool Update_Order(Order order);
+        public bool Update_Order(int Id_Order, int O_Status);
         public List<OrderAdmin> Get_All_CompletedOrders();
         public  List<OrderAdmin> Get_All_NotCompletedOrders();
         public List<OrderU> Get_AllOrder_User(int CUST_ID);

@@ -34,7 +34,7 @@ namespace Fashionista.api.Controllers
         [ProducesResponseType(typeof(Aggregetion), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Route("NumOfOrder/{IDOFUSER}")]
-    public Aggregetion NumOfOrder(int IDOFUSER)
+       public Aggregetion NumOfOrder(int IDOFUSER)
         {
             return aggregationService.NumOfOrder(IDOFUSER);
         }

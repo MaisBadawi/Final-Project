@@ -121,13 +121,13 @@ namespace Fashionista.api.Controllers
 
 
 
-        [HttpPut]
-        [Route("EditOrder")]
+        [HttpGet]
+        [Route("EditOrder/{Id_Order}/{O_Status}")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public bool Update_Order([FromBody] Order order)
+        public bool Update_Order(int Id_Order, int O_Status)
         {
-            return orderService.Update_Order(order);
+            return orderService.Update_Order(Id_Order, O_Status);
         }
 
 

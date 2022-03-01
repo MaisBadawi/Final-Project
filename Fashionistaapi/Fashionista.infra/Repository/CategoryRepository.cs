@@ -54,7 +54,7 @@ namespace Fashionista.infra.Repository
             var p = new DynamicParameters();
 
             p.Add("Name_OF_Category",cat.Name , dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("Image", cat.ImagePath, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("Image", cat.Image_Path, dbType: DbType.String, direction: ParameterDirection.Input);
 
             var result = context.connection.ExecuteAsync("Category_Package.Insert_Category", p, commandType: CommandType.StoredProcedure);
             return "valid";
@@ -66,7 +66,7 @@ namespace Fashionista.infra.Repository
 
             p.Add("Id_Of_Category", cat.Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             p.Add("Name_OF_Category", cat.Name, dbType: DbType.String, direction: ParameterDirection.Input);
-            p.Add("Image", cat.ImagePath, dbType: DbType.String, direction: ParameterDirection.Input);
+            p.Add("Image", cat.Image_Path, dbType: DbType.String, direction: ParameterDirection.Input);
 
             var result = context.connection.ExecuteAsync("Category_Package.Update_Category", p, commandType: CommandType.StoredProcedure);
             return true;

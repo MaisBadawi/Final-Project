@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -158,6 +159,74 @@ namespace Fashionista.api.Controllers
         public List<DetailsProp> GetPropDetailsYearly()
         {
             return productService.GetPropDetailsYearly();
+        }
+
+
+        [HttpPost]
+        [Route("uploadimage")]
+        public Property UploadImage()
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                byte[] fileImageContent;
+                using (var memory = new MemoryStream())
+                {
+                    file.CopyTo(memory);
+                    fileImageContent = memory.ToArray();
+                }
+                var fileName = Path.GetFileNameWithoutExtension(file.FileName);
+                string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
+
+                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+
+                return new Property()
+                {
+                    ImageProp = imageFileName
+                };
+            }
+            catch (FileLoadException)
+            {
+                return null;
+            }
+        }
+
+
+        [HttpPut]
+        [Route("updateImage")]
+        public Property updateImage()
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                byte[] fileImageContent;
+                using (var memory = new MemoryStream())
+                {
+                    file.CopyTo(memory);
+                    fileImageContent = memory.ToArray();
+                }
+                var fileName = Path.GetFileNameWithoutExtension(file.FileName);
+                string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
+
+                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+
+                return new Property()
+                {
+                    ImageProp = imageFileName
+                };
+            }
+            catch (FileLoadException)
+            {
+                return null;
+            }
         }
 
 

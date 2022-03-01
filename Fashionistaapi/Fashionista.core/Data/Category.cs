@@ -14,7 +14,7 @@ namespace Fashionista.core.Data
 
         public decimal Id { get; set; }
         public string Name { get; set; }
-        public string ImagePath { get; set; }
+        public string Image_Path { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
     }
