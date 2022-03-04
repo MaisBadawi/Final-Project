@@ -119,7 +119,7 @@ namespace Fashionista.infra.Service
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
                     Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name,Convert.ToString(result.Id) ), new Claim(ClaimTypes.Role, Convert.ToString(result.Rol_Id))}),
-                    Expires = DateTime.UtcNow.AddHours(1),
+                    Expires = DateTime.UtcNow.AddHours(3),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
                 };
 

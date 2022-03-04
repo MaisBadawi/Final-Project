@@ -1,4 +1,5 @@
 ﻿using Fashionista.core.Data;
+using Fashionista.core.DTO;
 using Fashionista.core.Repository;
 using Fashionista.core.Service;
 using System;
@@ -41,6 +42,11 @@ namespace Fashionista.infra.Service
         public bool Update_Category(Category cat)
         {
             return catRepository.Update_Category(cat);
+        }
+
+        public List<ProductDto> GetProduct_byCategory(int id)
+        {
+            return catRepository.GetProduct_byCategory(id);
         }
     }
 }

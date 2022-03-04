@@ -136,5 +136,26 @@ namespace Fashionista.infra.Service
         {
             return aggregationRepository.NumOrdersDailyComp();
         }
+
+
+        public float SumSalary2()
+        {
+            return aggregationRepository.SumSalary2();
+        }
+
+        public float SumSales2()
+        {
+            return aggregationRepository.SumSales2();
+        }
+
+      
+        public int NumUser2()
+        {
+            return aggregationRepository.NumUser2();
+        }
+        public int NumEmp2()
+        {
+            return aggregationRepository.NumEmp2();
+        }
     }
 }

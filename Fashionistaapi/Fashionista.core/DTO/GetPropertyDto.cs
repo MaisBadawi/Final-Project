@@ -12,7 +12,7 @@ namespace Fashionista.core.DTO
         public decimal Price { get; set; }
 
         public string Color { get; set; }
-        public string GeneralSize { get; set; }
+        public string Size { get; set; }
         public decimal EUR_SIZE { get; set; }
         public decimal UK_SIZE { get; set; }
 

@@ -47,7 +47,8 @@ namespace Fashionista.api
 
             services.AddScoped<IdbContext, dbContext>();
 
-
+            services.AddScoped<IHomeRepository, HomeRepository>();
+            services.AddScoped<IHomeService, HomeService>();
             services.AddScoped<IProductRepository, ProductRepository>();//1.pro
             services.AddScoped<IProductService, ProductService>();
 

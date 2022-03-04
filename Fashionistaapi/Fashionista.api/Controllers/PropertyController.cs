@@ -86,7 +86,7 @@ namespace Fashionista.api.Controllers
 
 
         [HttpGet]
-        [Route("GetByName/{name}")]
+        [Route("GetByName/{name}")]//
         [ProducesResponseType(typeof(List<GetPropertyDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public List<GetPropertyDto> GetByName(string name)
@@ -178,7 +178,7 @@ namespace Fashionista.api.Controllers
                 var fileName = Path.GetFileNameWithoutExtension(file.FileName);
                 string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
 
-                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                string path = Path.Combine("C:\\Users\\iMSI\\Desktop\\Team\\Fashinista (2)\\Fashinista\\Fashion\\Task\\src\\assets\\image", imageFileName);
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
                     file.CopyTo(fileStream);
@@ -212,7 +212,7 @@ namespace Fashionista.api.Controllers
                 var fileName = Path.GetFileNameWithoutExtension(file.FileName);
                 string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
 
-                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                string path = Path.Combine("C:\\Users\\iMSI\\Desktop\\Team\\Fashinista (2)\\Fashinista\\Fashion\\Task\\src\\assets\\image", imageFileName);
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
                     file.CopyTo(fileStream);

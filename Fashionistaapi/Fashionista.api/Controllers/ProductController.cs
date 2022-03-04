@@ -116,7 +116,7 @@ namespace Fashionista.api.Controllers
                 var fileName = Path.GetFileNameWithoutExtension(file.FileName);
                 string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
 
-                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                string path = Path.Combine("C:\\Users\\iMSI\\Desktop\\Team\\Fashinista (2)\\Fashinista\\Fashion\\Task\\src\\assets\\image", imageFileName);
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
                     file.CopyTo(fileStream);
@@ -150,7 +150,7 @@ namespace Fashionista.api.Controllers
                 var fileName = Path.GetFileNameWithoutExtension(file.FileName);
                 string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
 
-                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                string path = Path.Combine("C:\\Users\\iMSI\\Desktop\\Team\\Fashinista (2)\\Fashinista\\Fashion\\Task\\src\\assets\\image", imageFileName);
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
                     file.CopyTo(fileStream);

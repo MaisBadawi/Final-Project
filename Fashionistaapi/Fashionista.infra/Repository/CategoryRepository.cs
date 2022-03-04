@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Fashionista.core.Common;
 using Fashionista.core.Data;
+using Fashionista.core.DTO;
 using Fashionista.core.Repository;
 using System;
 using System.Collections.Generic;
@@ -70,6 +71,14 @@ namespace Fashionista.infra.Repository
 
             var result = context.connection.ExecuteAsync("Category_Package.Update_Category", p, commandType: CommandType.StoredProcedure);
             return true;
+        }
+
+        public List<ProductDto> GetProduct_byCategory(int id)
+        {
+            var p = new DynamicParameters();
+            p.Add("P_CategoryId", id, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            var result = context.connection.Query<ProductDto>("Category_Package.GetProduct_byCategory", p, commandType: CommandType.StoredProcedure);
+            return result.ToList();
         }
     }
 }

@@ -205,8 +205,47 @@ namespace Fashionista.infra.Repository
             var result = context.connection.Query<Aggregetion>("Aggregation_PACKAGE.NumOrdersDailyComp", commandType: CommandType.StoredProcedure);
             return result.FirstOrDefault();
         }
+        //
+        public float SumSalary2()
+        {
 
 
+            var result = context.connection.Query<float>("Aggregation_PACKAGE.SumSalary", commandType: CommandType.StoredProcedure).SingleOrDefault();
+            return result;
+        }
+
+        public float SumSales2()
+        {
+
+
+            float result = context.connection.Query<float>("Aggregation_PACKAGE.SumSales", commandType: CommandType.StoredProcedure).SingleOrDefault();
+            return result;
+        }
+
+        public int SumOrders(User IDOFUSER)
+        {
+            var p = new DynamicParameters();
+            p.Add("IDOFUSER", IDOFUSER.Id, dbType: DbType.Int32, direction: ParameterDirection.Input);
+
+            var result = context.connection.Query<int>("Aggregation_PACKAGE.SumOrders", p, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            return result;
+        }
+
+
+        public int NumUser2()
+        {
+
+
+            var result = context.connection.Query<int>("Aggregation_PACKAGE.NumUser", commandType: CommandType.StoredProcedure).FirstOrDefault();
+
+            return result;
+        }
+
+        public int NumEmp2()
+        {
+            var result = context.connection.Query<int>("Aggregation_PACKAGE.NumEmp", commandType: CommandType.StoredProcedure).SingleOrDefault();
+            return result;
+        }
 
     }
 }

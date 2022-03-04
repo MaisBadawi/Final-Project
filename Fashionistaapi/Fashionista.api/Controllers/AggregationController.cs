@@ -255,5 +255,43 @@ namespace Fashionista.api.Controllers
         {
             return aggregationService.NumOrdersDailyComp();
         }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumEmp2")]
+        public int NumEmp2()
+        {
+            return aggregationService.NumEmp2();
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("NumUser2")]
+        public int NumUser2()
+        {
+            return aggregationService.NumUser2();
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(float), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("SumSalary2")]
+        public float SumSalary2()
+        {
+            return aggregationService.SumSalary2();
+        }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(float), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("SumSales2")]
+        public float SumSales2()
+        {
+            return aggregationService.SumSales2();
+        }
     }
 }

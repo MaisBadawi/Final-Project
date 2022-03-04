@@ -1,4 +1,5 @@
 ﻿using Fashionista.core.Data;
+using Fashionista.core.DTO;
 using Fashionista.core.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -64,6 +65,16 @@ namespace Fashionista.api.Controllers
             return catservice.Delete_Category_By_Id(id);
         }
 
+        [HttpGet]
+        [ProducesResponseType(typeof(List<ProductDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [Route("GetProductByCategory/{id}")]
+        public List<ProductDto> GetProduct_byCategory(int id)
+        {
+            return catservice.GetProduct_byCategory(id);
+        }
+
+
         [HttpPost]
         [Route("uploadimage")]
         public Category UploadImage()
@@ -80,7 +91,7 @@ namespace Fashionista.api.Controllers
                 var fileName = Path.GetFileNameWithoutExtension(file.FileName);
                 string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
 
-                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                string path = Path.Combine("C:\\Users\\iMSI\\Desktop\\Team\\Fashinista (2)\\Fashinista\\Fashion\\Task\\src\\assets\\image", imageFileName);
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
                     file.CopyTo(fileStream);
@@ -113,7 +124,7 @@ namespace Fashionista.api.Controllers
                 var fileName = Path.GetFileNameWithoutExtension(file.FileName);
                 string imageFileName = $"{fileName}.{Path.GetExtension(file.FileName).Replace(".", "")}";
 
-                string path = Path.Combine("C:\\Users\\Otaibah toppsh\\Desktop\\Final-project-master\\Final-project-master\\Fashion\\Task\\src\\assets\\image", imageFileName);
+                string path = Path.Combine("C:\\Users\\iMSI\\Desktop\\Team\\Fashinista (2)\\Fashinista\\Fashion\\Task\\src\\assets\\image", imageFileName);
                 using (var fileStream = new FileStream(path, FileMode.Create))
                 {
                     file.CopyTo(fileStream);
